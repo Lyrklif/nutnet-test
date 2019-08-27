@@ -1,0 +1,83 @@
+// Переменные для breakpoints
+$grid-breakpoints: (xs: 0,
+x350: 350px,
+x400: 400px,
+x450: 450px,
+x480: 480px,
+x550: 550px,
+sm: 576px, 
+md: 768px,
+lg: 992px,
+xl: 1200px) !default;
+
+$container-max-widths: (sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1170px) !default;
+
+
+// Чёрный и белый 
+$white-color: #ffffff;
+$black-color: #000000;
+
+
+// Путь к дирестории изображений для подключения через css
+// Пример: 
+// background-image: url( $image_dir + 'name.png' );
+$image_dir: '../img/';
+
+
+// Общие
+$browser-context: 16px;
+$body-bg: #e1e1e1;
+$link-color: #1574af;
+
+$scroll-bar-color: #0f7bb1;
+$scroll-bar-bg-color: #ededed;
+
+
+// Шрифты 
+$font-family1: 'Arial', sans-serif;
+
+
+// Вкладки
+$tab-offset-px: 4px; // на сколько px сместить вкладки
+$tab-bg-color-top: #0685b4; // цвет верхней части вкладки
+$tab-bg-color-bottom: #1e65a6; // цвет нижней части вкладки
+
+
+// Профиль
+$profile-block-width: 490px;
+$profile-block-min-height: 280px;
+$profile-block-padding: 15px 10px 15px 15px;
+
+$user-photo-width: 132px;
+$user-photo-height: 170px;
+
+$btn-add-bg-1: #e65200;
+$btn-add-bg-2: #e68200;
+
+$profile-city-color: #757575;
+$interests-border-color: #d5d5d5;
+$interests-hover-bg: #f3f3f3;
+$invalid-input-bg: #fff5f2;
+
+$td-width: 130px;
+
+
+// Друзья пользователя
+$friends-max-height: 250px;
+$friends-max-height-mobile: 500px;
+
+$friends-item-width: 220px;
+
+$friends-avatar-width: 62px;
+$friends-avatar-height: 62px;
+
+$online-status-color: #2f8a26;
+$friends-city-color: #373737;
+
+
+
+
+

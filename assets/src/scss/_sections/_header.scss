@@ -1,0 +1,72 @@
+.nav-tabs__list {
+    margin: 0;
+}
+
+.nav-tabs__item {
+    display: inline-block;
+    margin-right: 5px;
+
+    &:nth-of-type(2) {
+        .nav-tabs__link {
+            padding: 9px 15px 8px 15px;
+        }
+    }
+}
+
+.nav-tabs__link {
+    display: block;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.38);
+    color: $white-color;
+    font-size: 14px;
+    background: linear-gradient(to top,
+        $tab-bg-color-bottom,
+        $tab-bg-color-top);
+    padding: 9px 16px 8px 16px;
+    // border-top-left-radius: 5px;
+    // border-top-right-radius: 5px;
+    border-radius: 5px 5px 0 0;
+    margin-top: $tab-offset-px;
+    position: relative;
+
+
+    &:hover,
+    &:focus {
+        background: linear-gradient(to top,
+            darken($tab-bg-color-bottom, 5%),
+            lighten($tab-bg-color-top, 5%));
+    }
+
+    &.active {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.31);
+        color: $black-color;
+        background: $white-color;
+        text-shadow: none;
+
+
+        &:after {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            background: $white-color;
+            position: absolute;
+            bottom: -$tab-offset-px;
+            left: 0;
+            z-index: 99;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 100%;
+        background: $tab-bg-color-bottom;
+        position: absolute;
+        bottom: -$tab-offset-px;
+        left: 0;
+        z-index: -99;
+
+    }
+
+}

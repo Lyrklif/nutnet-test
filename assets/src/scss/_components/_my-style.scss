@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+body {
+    font-family: $font-family1;
+    background: $body-bg;
+    padding: 46px 0;
+    font-size: $browser-context;
+}
+
+// *************************************
+
+.profile-block {
+    min-height: $profile-block-min-height;
+
+    display: block;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(sm) {
+        width: $profile-block-width;
+    }
+}
+
+
+.profile-block__content {
+    background: $white-color;
+    padding: $profile-block-padding;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.31);
+
+}
+
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        margin: 0;
+        display: block;
+        // position: absolute;
+    }
+}
+
+
+.btn-add {
+    font-size: 12px;
+    color: $white-color;
+    background: linear-gradient(to top, $btn-add-bg-1, $btn-add-bg-2);
+    border: none;
+    min-height: em(30, 12);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.38);
+    width: 100%;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.43);
+
+    &:hover,
+    &:focus {
+        background:
+            linear-gradient(to top,
+            darken($btn-add-bg-1, 2%),
+            lighten($btn-add-bg-2, 2%));
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.50);
+    }
+}
+
+

@@ -1,0 +1,19 @@
+
+// Подключение всех scss-файлов
+
+
+// Библиотеки 
+@import '_components/_libs/normalize.scss';			// Сброс стилей
+
+
+// Компоненты
+@import '_components/_variables.scss'; 				// Переменные
+@import '_components/_breakpoints.scss'; 			// Миксины для media-запросов breakpoints
+@import '_components/_functions.scss';				// Функции 
+@import '_components/_my-style.scss'; 				// Основные стили
+
+
+// Стили отдельных блоков
+@import '_sections/_header.scss'; 					// Стили header
+
+
