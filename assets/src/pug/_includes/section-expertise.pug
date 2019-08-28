@@ -1,0 +1,20 @@
+mixin service(title)
+    .service
+        .service__decor-img&attributes(attributes)
+        h3= title
+        if block
+            block
+        else
+            p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+
+section.expertise
+    header  
+        h2.expertise__title Expertise
+        p.expertise__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
+    ul.expertise__list
+        li.expertise__item: +service('Web design & development')(class='web')
+        li.expertise__item: +service('Branding identity')(class='identity')
+        li.expertise__item: +service('Mobile app')(class='modile')
+        li.expertise__item: +service('Search engine optimization')(class='optimize')
+        li.expertise__item: +service('Game development')(class='game')
+        li.expertise__item: +service('Made with love')(class='love')

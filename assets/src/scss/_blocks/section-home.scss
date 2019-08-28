@@ -1,0 +1,32 @@
+// Первый раздел сайта
+
+.home {
+    text-align: center;
+    // background: #332a54;
+    color: $text-on-dark-bg;
+
+    padding: 228px 0 218px 0;
+
+    // background-image: url( $image_dir + 'home-bg.png' );
+    &:before {
+        background-image: url( $image_dir + 'home-bg.png' );
+    }
+}
+
+.home__title {
+    font-size: 32px;
+    font-family: $font-family3;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.home__text {
+    font-size: 14px;
+    font-family: $font-family1;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.home__btn {
+    margin-top: 52px;
+}

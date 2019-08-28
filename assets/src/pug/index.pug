@@ -1,7 +1,13 @@
 extends  layouts/default
 
 block vars
-     - var pageTitle = 'Главная страница';
+     - var pageTitle = 'tajam - landing page';
+     
 
 block content
-    h1 основное содержимое страницы dd
+     header.hidden
+          h1 Tajam
+     include _includes/section-home 
+     include _includes/section-about 
+     include _includes/section-video 
+     include _includes/section-expertise 

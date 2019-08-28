@@ -1,19 +1,26 @@
-
 // Подключение всех scss-файлов
 
 
 // Библиотеки 
-@import '_components/_libs/normalize.scss';			// Сброс стилей
+@import '_libs/normalize.scss';			// Сброс стилей
+
+@import '_components/_variables.scss'; // Переменные
+@import '_libs/bootstrap-4.3.1-scss/bootstrap.scss'; // Тут закомментированы лишние модули
+
+@import '_libs/_slick.scss'; // Стили слайдеров
+@import '_libs/slick-theme.scss'; // Стили слайдеров
 
 
 // Компоненты
-@import '_components/_variables.scss'; 				// Переменные
-@import '_components/_breakpoints.scss'; 			// Миксины для media-запросов breakpoints
 @import '_components/_functions.scss';				// Функции 
 @import '_components/_my-style.scss'; 				// Основные стили
 
 
 // Стили отдельных блоков
-@import '_sections/_header.scss'; 					// Стили header
+@import '_blocks/header.scss'; 					// Стили header
+@import '_blocks/section-home.scss'; 			// Стили первого блока сайта, заголовок "We Are Awesome Creative Agency"
+@import '_blocks/section-about.scss'; 			// Стили раздела About, заголовок "Our story"
+@import '_blocks/section-video.scss'; 			// Стили раздела Video 
+@import '_blocks/section-expertise.scss'; 		// Стили раздела Expertise
 
 

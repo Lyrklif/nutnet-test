@@ -1,0 +1,9 @@
+
+.service__decor-img {
+    display: block;
+    background-position: center;
+}
+
+.service__decor-img.web {
+    background-image: url( $image_dir + 'name.png' );
+}

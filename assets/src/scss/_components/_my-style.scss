@@ -26,70 +26,86 @@ img {
 
 body {
     font-family: $font-family1;
-    background: $body-bg;
-    padding: 46px 0;
     font-size: $browser-context;
 }
 
 // *************************************
 
-.profile-block {
-    min-height: $profile-block-min-height;
+// Ссылка, похожая на кнопку
+.link-btn {
+    display: inline-block;
+    text-align: center;
+    color: $link-btn-color;
+    border: 1px solid $link-btn-color;
+    min-width: 120px;
+    min-height: 40px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: $font-family2;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
 
-    display: block;
-    margin: 0 auto;
-
-    @include media-breakpoint-up(sm) {
-        width: $profile-block-width;
+    &:hover {
+        background: $link-btn-color;
+        color: $white-color;
     }
 }
 
 
-.profile-block__content {
-    background: $white-color;
-    padding: $profile-block-padding;
-    border-radius: 5px;
-    border-top-left-radius: 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.31);
-
+// Элемент с чертой снизу
+.line-bottom {
+    &:after {
+        content: '';
+        width: 50px;
+        height: 1px;
+        display: block;
+        margin: 21px auto 5px auto;
+        background: $line-bottom-bg;
+    }
 }
 
+.overlay {
+    background: rgba(63, 52, 98, .8);
+    background: linear-gradient(90deg,
+            rgba(46, 43, 79, .8) 0%,
+            rgba(63, 52, 98, .8) 50%,
+            rgba(80, 63, 117, .8) 100%);
 
-.avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    overflow: hidden;
     position: relative;
 
-    img {
-        margin: 0;
+    &:before {
+        content: '';
         display: block;
-        // position: absolute;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        background-size: cover;
+        z-index: -1;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+
+        // Нужно добавить фоновое изображение для каждого блока по такому типу: 
+        // background-image: url( $image_dir + 'home-bg.png' );
     }
 }
 
-
-.btn-add {
-    font-size: 12px;
-    color: $white-color;
-    background: linear-gradient(to top, $btn-add-bg-1, $btn-add-bg-2);
-    border: none;
-    min-height: em(30, 12);
-    border-radius: 2px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.38);
-    width: 100%;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.43);
-
-    &:hover,
-    &:focus {
-        background:
-            linear-gradient(to top,
-            darken($btn-add-bg-1, 2%),
-            lighten($btn-add-bg-2, 2%));
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.50);
-    }
+// Логотип
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo__img {
+    height: 50px;
+    widows: 44px;
+    margin-right: 12px;
 }
 
-
+.logo__text {
+    font-size: 30px;
+  font-family: $font-family1;
+  color: $basic-color-1;
+  font-weight: 100;
+}
