@@ -3337,7 +3337,7 @@ body {
 
 .logo__img {
   height: 50px;
-  widows: 44px;
+  width: 44px;
   margin-right: 12px; }
 
 .logo__text {
@@ -3609,3 +3609,79 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
   text-align: center; }
+  .team:before {
+    background-image: url("../img/team-bg.png"); }
+
+.team__header {
+  font-family: "Playfair Display", serif; }
+
+.team__title {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.team__subtitle {
+  font-size: 14px;
+  color: #f9f9f9; }
+
+.team__list {
+  margin-top: 47px;
+  margin-bottom: 0; }
+
+.team-member {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  margin-bottom: 70px; }
+  .team-member:hover {
+    background: rgba(255, 255, 255, 0.1); }
+
+.team-member__foto-wp {
+  height: 230px;
+  max-height: 230px;
+  max-width: 100%;
+  width: 100%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.team-member__foto {
+  max-height: 100%;
+  max-width: 100%;
+  display: block; }
+
+.team-member__text-wp {
+  font-family: "Roboto", sans-serif;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  text-transform: uppercase;
+  padding: 20px; }
+
+.team-member__name {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 900;
+  margin-top: 0; }
+
+.team-member__profession {
+  font-weight: 300;
+  color: #fafafa;
+  font-size: 13px;
+  margin-bottom: 0; }
+
+.team__text {
+  margin-top: 0;
+  margin-bottom: 29px;
+  color: #f3f3f3;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif; }
+
+.team__btn {
+  min-width: 140px; }
