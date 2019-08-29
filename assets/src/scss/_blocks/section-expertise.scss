@@ -1,9 +1,106 @@
+.expertise {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
 
-.service__decor-img {
-    display: block;
-    background-position: center;
 }
 
+.expertise__header {
+    font-family: $font-family3;
+}
+
+.expertise__title {
+    font-size: 22px;
+    color: $expertise-title-color;
+    font-weight: 700;
+}
+
+.expertise__text {
+    font-size: 14px;
+    // color: $expertise-text-color;
+    color: rgba(47, 45, 53, 0.749);
+}
+
+.expertise__list-wp {
+    overflow: hidden;
+    margin-top: 80px;
+
+}
+
+.expertise__list {
+    margin: 0 -12px -12px 0;
+}
+
+.expertise__item {
+    border-bottom: $service-border;
+    border-right: $service-border;
+}
+
+.service {
+    padding: 39px 22px;
+}
+
+.service__title {
+    font-size: 14px;
+    font-family: $font-family1;
+    color: $service-title-color;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
+
+.service__text {
+    font-size: 14px;
+    // color: $service-text-color;
+    color: rgba(51, 51, 51, 0.749);
+    line-height: 1.571;
+    font-weight: 300;
+}
+
+
+.service__decor-img {
+    margin: 0 auto;
+}
+
+// Спрайт
 .service__decor-img.web {
-    background-image: url( $image_dir + 'name.png' );
+    background-image: url($image_dir + 'service-sprite.png' );
+    background-position: -50px 0px;
+    width: 49px;
+    height: 50px;
+}
+
+.service__decor-img.identity {
+    background-image: url($image_dir + 'service-sprite.png' );
+    background-position: -99px 0px;
+    width: 50px;
+    height: 42px;
+}
+
+.service__decor-img.modile {
+    background-image: url($image_dir + 'service-sprite.png' );
+    background-position: 0px -96px;
+    width: 28px;
+    height: 50px;
+}
+
+.service__decor-img.optimize {
+    background-image: url($image_dir + 'service-sprite.png' );
+    background-position: 0px 0px;
+    width: 50px;
+    height: 50px;
+}
+
+.service__decor-img.game {
+    background-image: url($image_dir + 'service-sprite.png' );
+    background-position: -99px -42px;
+    width: 41px;
+    height: 50px;
+}
+
+.service__decor-img.love {
+    background-image: url($image_dir + 'service-sprite.png' );
+    background-position: 0px -50px;
+    width: 50px;
+    height: 46px;
 }

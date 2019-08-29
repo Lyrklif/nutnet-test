@@ -147,7 +147,7 @@ template {
   display: none; }
 
 /*  
-Вспомогательные комментарии
+Шпаргалка
 
 ***********
 @include media-breakpoint-up(sm)
@@ -3293,13 +3293,20 @@ body {
     background: #00e0d0;
     color: #ffffff; }
 
-.line-bottom:after {
+.default--line-bottom:after, .line-bottom:after, .line-bottom-bright:after {
   content: '';
   width: 50px;
-  height: 1px;
   display: block;
-  margin: 21px auto 5px auto;
-  background: #00e0d0; }
+  margin: 21px auto 5px auto; }
+
+.line-bottom:after {
+  content: '';
+  height: 2px;
+  background: #c6c4c9; }
+
+.line-bottom-bright:after {
+  background: #00e0d0;
+  height: 1px; }
 
 .overlay {
   background: rgba(63, 52, 98, 0.8);
@@ -3514,9 +3521,91 @@ body {
   margin-top: -4px;
   margin-left: 0px; }
 
+.expertise {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px; }
+
+.expertise__header {
+  font-family: "Playfair Display", serif; }
+
+.expertise__title {
+  font-size: 22px;
+  color: #413d4b;
+  font-weight: 700; }
+
+.expertise__text {
+  font-size: 14px;
+  color: rgba(47, 45, 53, 0.749); }
+
+.expertise__list-wp {
+  overflow: hidden;
+  margin-top: 80px; }
+
+.expertise__list {
+  margin: 0 -12px -12px 0; }
+
+.expertise__item {
+  border-bottom: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb; }
+
+.service {
+  padding: 39px 22px; }
+
+.service__title {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #413d4b;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 26px; }
+
+.service__text {
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.749);
+  line-height: 1.571;
+  font-weight: 300; }
+
 .service__decor-img {
-  display: block;
-  background-position: center; }
+  margin: 0 auto; }
 
 .service__decor-img.web {
-  background-image: url("../img/name.png"); }
+  background-image: url("../img/service-sprite.png");
+  background-position: -50px 0px;
+  width: 49px;
+  height: 50px; }
+
+.service__decor-img.identity {
+  background-image: url("../img/service-sprite.png");
+  background-position: -99px 0px;
+  width: 50px;
+  height: 42px; }
+
+.service__decor-img.modile {
+  background-image: url("../img/service-sprite.png");
+  background-position: 0px -96px;
+  width: 28px;
+  height: 50px; }
+
+.service__decor-img.optimize {
+  background-image: url("../img/service-sprite.png");
+  background-position: 0px 0px;
+  width: 50px;
+  height: 50px; }
+
+.service__decor-img.game {
+  background-image: url("../img/service-sprite.png");
+  background-position: -99px -42px;
+  width: 41px;
+  height: 50px; }
+
+.service__decor-img.love {
+  background-image: url("../img/service-sprite.png");
+  background-position: 0px -50px;
+  width: 50px;
+  height: 46px; }
+
+.team {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center; }

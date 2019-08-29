@@ -53,14 +53,29 @@ body {
 
 
 // Элемент с чертой снизу
-.line-bottom {
+.default--line-bottom {
     &:after {
         content: '';
         width: 50px;
-        height: 1px;
         display: block;
         margin: 21px auto 5px auto;
+    }
+}
+
+.line-bottom {
+    &:after {
+        @extend .default--line-bottom;
+        content: '';
+        height: 2px;
         background: $line-bottom-bg;
+    }
+}
+
+.line-bottom-bright {
+    &:after {
+        @extend .default--line-bottom;
+        background: $basic-color-1;
+        height: 1px;
     }
 }
 
@@ -97,6 +112,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 .logo__img {
     height: 50px;
     widows: 44px;
@@ -105,7 +121,7 @@ body {
 
 .logo__text {
     font-size: 30px;
-  font-family: $font-family1;
-  color: $basic-color-1;
-  font-weight: 100;
+    font-family: $font-family1;
+    color: $basic-color-1;
+    font-weight: 100;
 }

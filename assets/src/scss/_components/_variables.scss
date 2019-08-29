@@ -50,7 +50,7 @@ $text-on-dark-bg: $white-color;
 $link-btn-color: $basic-color-1;
 
 // Элемент с чертой снизу
-$line-bottom-bg: $basic-color-1;
+$line-bottom-bg: #c6c4c9;
 
 // Шапка сайта
 $site-nav-active-color: $basic-color-1;
@@ -58,8 +58,18 @@ $site-nav-active-color: $basic-color-1;
 // Первый раздел сайта
 $about-title-color: $basic-color-2;
 
+// Блок Expertise
+$expertise-title-color: $basic-color-2;
+$expertise-text-color: $basic-color-3;
+
+// Карточка услуги в блоке Expertise
+$service-title-color: $basic-color-2;
+$service-text-color: $basic-color-4;
+$service-border: 1px solid #ebebeb;
+
+
 /*  
-Вспомогательные комментарии
+Шпаргалка
 
 ***********
 @include media-breakpoint-up(sm)
