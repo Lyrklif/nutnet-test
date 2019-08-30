@@ -44,6 +44,7 @@ body {
     font-family: $font-family2;
     transition: .3s ease-in-out;
     text-transform: uppercase;
+    background: none;
 
     &:hover {
         background: $link-btn-color;
@@ -115,19 +116,12 @@ body {
 
 // Логотип
 .logo {
-    display: flex;
-    align-items: center;
+    height: 50px;
+    width: 128px;
 }
 
 .logo__img {
     height: 50px;
-    width: 44px;
-    margin-right: 12px;
-}
-
-.logo__text {
-    font-size: 30px;
-    font-family: $font-family1;
-    color: $basic-color-1;
-    font-weight: 100;
+    width: 128px;
+    max-width: 100%;
 }

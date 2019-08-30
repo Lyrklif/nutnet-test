@@ -1,0 +1,39 @@
+.contact {
+    text-align: center;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.contact__title {
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-size: 22px;
+    font-family: $font-family3;
+    color: $basic-color-2;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feedback__input,
+.feedback__massage {
+    width: 100%;
+    margin-bottom: 21px;
+    padding: 17px 20px;
+    border: 1px solid #e5e5e5;
+
+    font-size: 14px;
+    //   color: #413d4b;
+    color: rgba(65, 61, 75, .5);
+
+    &::placeholder {
+        //   color: #413d4b;
+        color: rgba(65, 61, 75, .5);
+    }
+}
+
+.feedback__massage {
+    height: 200px;
+    resize: none;
+}

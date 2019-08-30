@@ -1,0 +1,54 @@
+mixin comment(name, profession)
+    .comment
+        if block
+            p.comment__text: block
+        else
+            p.comment__text 
+                | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. 
+                | Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. 
+                | Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+                | Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+        h3.comment__name= name
+        p.comment__profession= profession
+
+
+
+mixin people-say__item()
+    li.people-say__item 
+        block 
+
+
+mixin userpic-dot()
+    button.userpic-dot 
+        img.userpic-dot__img(src=src alt='dot')&attributes(attributes)
+
+mixin people-say__dot()
+    li.people-say__dot  
+        block
+        
+
+section.people-say.overlay
+    .container
+        .row
+            header.col.hidden
+                h2 People say
+        .row    
+            .col-12.offset-md-1.col-md-10.people-say__list-wp
+                ul.people-say__list
+                    +people-say__item(): +comment('Jane Galadriel', 'Ceo tengkurep')
+                    +people-say__item(): +comment('Name', 'Profession')
+                        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia perferendis sed dolorem pariatur, rerum quos.
+                        | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia perferendis sed dolorem pariatur, rerum quos.
+                    +people-say__item(): +comment('Name', 'Profession')
+                    +people-say__item(): +comment('Name', 'Profession')
+                    +people-say__item(): +comment('Name', 'Profession')
+        .row
+            .col-12.offset-md-1.col-md-10
+                ul.people-say__dots 
+                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-1.png')
+                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-2.png')
+                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-3.png')
+                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-4.png')
+                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-5.png')
+                div.people-say__dots-wp
+

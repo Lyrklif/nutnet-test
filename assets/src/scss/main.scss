@@ -8,7 +8,9 @@
 @import '_libs/bootstrap-4.3.1-scss/bootstrap.scss'; // Тут закомментированы лишние модули
 
 @import '_libs/_slick.scss'; // Стили слайдеров
-@import '_libs/slick-theme.scss'; // Стили слайдеров
+// @import '_libs/owl.theme.scss'; // Стили слайдеров
+// @import '_libs/owl.theme.default.scss'; // Стили слайдеров
+// @import '_libs/slick-theme.scss'; // Стили слайдеров
 
 
 // Компоненты
@@ -24,5 +26,8 @@
 @import '_blocks/section-expertise.scss'; 		// Стили раздела Expertise
 @import '_blocks/section-team.scss'; 		    // Стили раздела Team
 @import '_blocks/section-works.scss'; 		    // Стили раздела Works
+@import '_blocks/section-people-say.scss'; 		    // Стили раздела People say
+@import '_blocks/section-contact.scss'; 		    // Стили раздела Contact
+@import '_blocks/footer.scss'; 		    // Стили раздела Contact
 
 
