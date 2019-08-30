@@ -1,6 +1,52 @@
+mixin social(href)
+    a.soocial__link(href=href)
+        div.soocial__icon(class!=attributes.class)
+
+
+mixin social__item()
+    li.social__item
+        block
+
+
+
 footer.footer.overlay 
     .container
         .row
-            .col    
+            .col-12.col-md-6.col-lg-4  
                 a.logo(href="#")
                     img.logo__img(src="img/logo.png", alt="Tajam")
+                p.footer__text
+                    | lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit.
+                    | Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
+                ul.footer__links 
+                    li.footer__item: a.footer__link(href="#") Help
+                    li.footer__item: a.footer__link(href="#") Terms & Condition
+                    li.footer__item: a.footer__link(href="#") Privacy
+            .col-12.col-md-6.col-lg-4 
+                b.footer__headline Our studio
+                address
+                    ul
+                        li.footer__address 
+                            .footer__icon-wp
+                                .icon-point
+                            | Ruko cucruk, Jl. Radio luar dalem jos<br>
+                            | No.12 - 13, Kalideres - Jakarta Barat<br>
+                            | 11480 - Indonesia
+                        li.footer__tel
+                            .footer__icon-wp
+                                .icon-telephone
+                            a(href="tel:622122243333") (+62)&nbsp;21-2224 3333
+            .col-12.col-md-6.col-lg-4    
+                b.footer__headline Stay in touch
+                form.subscribe(action="/" method='post')
+                    input.subscribe__input(type="email", placeholder='Subscribe our newsletter')
+                    button.subscribe__btn(type="submit")
+                        .icon-paper
+                ul.social
+                    +social__item(): +social('#')(class='icon-facebook')
+                    +social__item(): +social('#')(class='icon-twitter')
+                    +social__item(): +social('#')(class='icon-dribbble')
+                    +social__item(): +social('#')(class='icon-instagram')
+                    +social__item(): +social('#')(class='icon-google')
+                    +social__item(): +social('#')(class='icon-youtube')
+                small.footer__copyright Copyright © 2015 - Tajem Creative

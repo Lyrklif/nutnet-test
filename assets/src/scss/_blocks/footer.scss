@@ -1,0 +1,187 @@
+.ddddd {
+    height: 30px;
+    widows: 30px;
+}
+
+.footer {
+    color: #fff;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 14px;
+
+    &:before {
+        background-image: url($image_dir + 'footer-bg.png' );
+    }
+}
+
+.footer__text {
+    // font-size: 14px;
+    line-height: 1.857;
+    font-weight: 300;
+}
+
+.footer__links {
+    // font-size: 14px;
+    line-height: 1.857;
+    text-transform: uppercase;
+
+}
+
+.footer__item {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer__link {
+    color: #fff;
+}
+
+.footer__headline {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.footer__address {
+    // font-size: 14px;
+    line-height: 1.857;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+}
+
+.footer__icon-wp {
+    position: relative;
+    width: 30px;
+    height: 100%;
+    display: block;
+    padding-top: 3px;
+}
+
+.footer__tel {
+    line-height: 1.857;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+
+    a {
+        color: #fff;
+    }
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe__input {
+    background: none;
+    // padding: 17px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    width: 210px;
+    max-width: 210px;
+    margin-right: 10px;
+    height: 45px;
+    // display: inline-block;
+    color: rgba(255, 255, 255, .75);
+
+    &::placeholder {
+        color: rgba(255, 255, 255, .75);
+    }
+
+    &:hover,
+    &:focus {
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
+.subscribe__btn {
+    border: none;
+    background: rgba(255, 255, 255, .5);
+    width: 68px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+        background: rgba(255, 255, 255, .3);
+    }
+}
+
+.footer__copyright {
+    font-size: 14px;
+}
+
+
+// ******************************
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.social__item {
+    margin: 0 8px 8px 0;
+}
+
+.soocial__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    &:hover {
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
+
+// ******************************
+.facebook {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: 0px -30px;
+    width: 7px;
+    height: 15px;
+}
+
+.twitter {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: -31px -11px;
+    width: 14px;
+    height: 11px;
+}
+
+.dribbble {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.instagram {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: -16px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.google {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: 0px -16px;
+    width: 15px;
+    height: 14px;
+}
+
+.youtube {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: -31px 0px;
+    width: 17px;
+    height: 11px;
+}
