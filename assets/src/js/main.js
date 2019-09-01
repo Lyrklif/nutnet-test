@@ -17,6 +17,8 @@
 $(document).ready(function() {
     @@include('assets/src/js/_includes/people-say-slider.js') 
     @@include('assets/src/js/_includes/header-burger-menu.js') 
+    @@include('assets/src/js/_includes/animate-scroll.js') 
+    @@include('assets/src/js/_includes/header-active-link.js') 
     
     
 });
