@@ -31,6 +31,24 @@ body {
 
 // *************************************
 
+// Отступы у блоков (section)
+.about,
+.expertise,
+.team,
+.works,
+.people-say,
+.contact,
+.footer {
+    padding-top: $section-padding - 20px;
+    padding-bottom: $section-padding - 20px;
+
+    @include media-breakpoint-up(sm) {
+        padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    }
+}
+
+
 // Ссылка, похожая на кнопку
 .link-btn {
     display: inline-block;

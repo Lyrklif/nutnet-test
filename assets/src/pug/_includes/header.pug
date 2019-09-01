@@ -3,11 +3,16 @@ header.header
         nav.site-nav
             a.site-nav__logo.logo(href="#")
                 img.logo__img(src="img/logo.png", alt="Tajam")
-            ul.site-nav__list
-                li.site-nav__item: a.site-nav__link.active(href="#") Home
-                li.site-nav__item: a.site-nav__link(href="#") About
-                li.site-nav__item: a.site-nav__link(href="#") Expertise
-                li.site-nav__item: a.site-nav__link(href="#") Teams
-                li.site-nav__item: a.site-nav__link(href="#") Works
-                li.site-nav__item: a.site-nav__link(href="#") People say
-                li.site-nav__item: a.site-nav__link(href="#") Contact
+            ul.site-nav__list#navbar
+                li.site-nav__item: a.site-nav__link.active(href="#home") Home
+                li.site-nav__item: a.site-nav__link(href="#about") About
+                li.site-nav__item: a.site-nav__link(href="#expertise") Expertise
+                li.site-nav__item: a.site-nav__link(href="#teams") Teams
+                li.site-nav__item: a.site-nav__link(href="#works") Works
+                li.site-nav__item: a.site-nav__link(href="#people-say") People say
+                li.site-nav__item: a.site-nav__link(href="#contact") Contact
+            button.burger
+                span.burger__line
+
+
+

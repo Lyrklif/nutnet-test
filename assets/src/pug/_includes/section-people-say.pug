@@ -18,16 +18,14 @@ mixin people-say__item()
         block 
 
 
-mixin userpic-dot()
-    button.userpic-dot 
-        img.userpic-dot__img(src=src alt='dot')&attributes(attributes)
+mixin userpic-dot(src)
+    li.userpic-dot
+        button.userpic-dot__btn 
+            img.userpic-dot__img(src=src alt='dot')&attributes(attributes)
 
-mixin people-say__dot()
-    li.people-say__dot  
-        block
-        
 
-section.people-say.overlay
+
+section.people-say.overlay#people-say
     .container
         .row
             header.col.hidden
@@ -44,11 +42,10 @@ section.people-say.overlay
                     +people-say__item(): +comment('Name', 'Profession')
         .row
             .col-12.offset-md-1.col-md-10
-                ul.people-say__dots 
-                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-1.png')
-                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-2.png')
-                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-3.png')
-                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-4.png')
-                    +people-say__dot(): +userpic-dot()(src='img/user-pic-dot-5.png')
-                div.people-say__dots-wp
+                ul.people-say__nav-slider
+                    +userpic-dot('img/user-pic-dot-1.png')
+                    +userpic-dot('img/user-pic-dot-2.png')
+                    +userpic-dot('img/user-pic-dot-3.png')
+                    +userpic-dot('img/user-pic-dot-4.png')
+                    +userpic-dot('img/user-pic-dot-5.png')
 

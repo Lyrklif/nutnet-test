@@ -1,4 +1,130 @@
-.works {
-    padding-top: 70px;
-    padding-bottom: 70px;
+// .works {
+//     padding-top: 70px;
+//     padding-bottom: 70px;
+// }
+
+
+.works__header {
+    color: #413d4b;
+    margin-bottom: 70px;
+
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.works__title {
+    font-size: 22px;
+    font-family: "Playfair Display";
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 0;
+    }
+}
+
+
+.works__link {
+    font-size: 14px;
+    text-align: right;
+    color: inherit;
+    font-weight: 300;
+
+    &:after {
+        content: '';
+        border: 1px solid #413d4b;
+        height: .7em;
+        width: .7em;
+        margin-left: 10px;
+        display: inline-block;
+        border-left: none;
+        border-top: none;
+        transform: rotate(-45deg);
+    }
+}
+
+
+.portfolio__item {
+    padding: 0;
+
+    &:nth-of-type(12n + 1),
+    &:nth-of-type(12n + 5),
+    &:nth-of-type(12n + 12),
+    &:nth-of-type(12n + 8) {
+        .portfolio__content {
+            background: $portfolio-bg-1;
+        }
+    }
+
+    &:nth-of-type(12n + 2),
+    &:nth-of-type(12n + 11) {
+        .portfolio__content {
+            background: $portfolio-bg-2;
+        }
+    }
+
+    &:nth-of-type(12n + 3),
+    &:nth-of-type(12n + 10) {
+        .portfolio__content {
+            background: $portfolio-bg-3;
+        }
+    }
+
+    &:nth-of-type(12n + 4),
+    &:nth-of-type(12n + 9) {
+        .portfolio__content {
+            background: $portfolio-bg-4;
+        }
+    }
+
+    &:nth-of-type(12n + 6),
+    &:nth-of-type(12n + 7) {
+        .portfolio__content {
+            background: $portfolio-bg-5;
+        }
+    }
+}
+
+.portfolio__link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; // пропорции блока 
+
+    &:hover,
+    &:focus {
+        .portfolio__content {
+            opacity: .9;
+        }
+    }
+}
+
+.portfolio__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// .portfolio__img {
+//     width: 100%; /* Ширина изображений */
+//  height: 100%; /* Высота изображении */
+//  object-fit: cover; /* Вписываем фотографию в область */
+
+// }
+
+
+.works__btn-wp {
+    text-align: center;
+    margin-top: 70px;
 }

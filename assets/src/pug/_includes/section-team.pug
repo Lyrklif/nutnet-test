@@ -1,7 +1,7 @@
 mixin team-member(name, profession)
     .team-member
         .team-member__foto-wp   
-            img.team-member__foto(src=src alt='Foto')&attributes(attributes)
+            //- img.team-member__foto(src=src alt='Foto')&attributes(attributes)
         .team-member__text-wp
             h3.team-member__name= name
             p.team-member__profession= profession
@@ -12,7 +12,7 @@ mixin team__item()
         block 
 
 
-section.team.overlay
+section.team.overlay#teams
     .container
         .row
             header.col.line-bottom.team__header  

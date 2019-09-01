@@ -1,5 +1,33 @@
-section.works
-    header
-        h2 OUR WORKS
-        a(href="#") See All Project in dribbble
-    a.link-btn(href="#") LOAD MORE
+mixin portfolio(href, src)
+    li.col-12.col-sm-6.col-md-3.col-lg-2.portfolio__item
+        a(href=href).portfolio__link
+            .portfolio__content
+                //- img.portfolio__img(src=src, alt="Project title")
+
+
+
+
+section.works#works
+    .container  
+        .row
+            header.col.works__header
+                h2.works__title Our works
+                a.works__link(href="#") See All Project in dribbble
+    .container-fluid
+        ul.row.works__portfolio.portfolio
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+            +portfolio("#", "img/portfolio.png")
+    .container
+        .row
+            .col.works__btn-wp
+                a.link-btn(href="#") Load more
