@@ -1,8 +1,6 @@
 .people-say {
-    // padding-top: 70px;
-    // padding-bottom: 70px;
-
     text-align: center;
+
     &:before {
         background-image: url($image_dir + 'team-bg.png' );
     }
@@ -13,11 +11,15 @@
     position: relative;
     padding-top: 46px;
 
+    .slick-slide {
+        outline: none;
+    }
+
 
     &:before {
         content: '\201c';
         font-size: 100px;
-        font-family: "Playfair Display";
+        font-family: $font-family3;
         color: rgba(255, 255, 255, 0.902);
         display: block;
         position: absolute;
@@ -33,6 +35,8 @@
 
 .comment {
     color: $text-on-dark-bg;
+
+
 }
 
 .comment__text {
@@ -94,6 +98,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 0 auto;
 
     width: 50px;
     height: 50px;

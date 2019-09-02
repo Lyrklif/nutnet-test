@@ -10379,30 +10379,41 @@ $(document).ready(function() {
 var peopleSaySlider = $('.people-say__list'),
   peopleSayNavSlider = $('.people-say__nav-slider'),
   numberDotsPeopleSay = peopleSayNavSlider.find("li").length,
-  countDotsPeopleSaySmall = numberDotsPeopleSay;
+  dotShowSmall = 3;
+
+if (numberDotsPeopleSay < 3) {
+  dotShowSmall = numberDotsPeopleSay;
+};
 
 if (numberDotsPeopleSay > 5) {
-  countDotsPeopleSaySmall = 5;
+  numberDotsPeopleSay = 5;
 };
 
 peopleSaySlider.slick({ // это изначально slick слайдер для основного блока изображений
   slidesToShow: 1, // по одному слайдеру 
   slidesToScroll: 1, // по одному менять
-  arrows: false, // включение стрелок 
-  asNavFor: '.people-say__nav-slider', // указываем что навигация для слайдера будет отдельно (указываем класс куда вешаем навигацию)
-  draggable: false
+  arrows: false, // выключение стрелок 
+  asNavFor: peopleSayNavSlider, // навигация для слайдера 
+  draggable: false,
+  swipe: false,
+  mobileFirst: true,
+  initialSlide: 0,
 });
 
 peopleSayNavSlider.slick({ // настройка навигации
-  slidesToShow: numberDotsPeopleSay,
-  arrows: false, // включение стрелок 
-  asNavFor: '.people-say__list', // указываем что это навигация для блока выше
-  focusOnSelect: true, // указываем что бы слайделось по клику
+  arrows: false, // выключение стрелок 
+  asNavFor: peopleSaySlider, // навигация для блока выше
+  focusOnSelect: true, 
+  swipe: false,
+  centerMode:true,
+  mobileFirst: true,
+
+  slidesToShow: dotShowSmall,
 
   responsive: [{
     breakpoint: 540,
     settings: {
-      slidesToShow: countDotsPeopleSaySmall,
+      slidesToShow: numberDotsPeopleSay,
     }
   }]
 });       // Слайдер отзывов в разделе People say
@@ -10497,7 +10508,7 @@ $(window).scroll(function () {
            // Добавление класса 'scroll' для выпадающих элементов шапки
     // Модальное окно в разделе Video
 
-var openVideo = $('.video__btn'),
+var openVideo = $('.video__watch'),
     modalVideo = $('.modal-video'),
     modalWp = $('.modal-wp'),
     closeModalVideo = $('.modal-video__close'), 

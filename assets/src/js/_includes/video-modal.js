@@ -1,6 +1,6 @@
 // Модальное окно в разделе Video
 
-var openVideo = $('.video__btn'),
+var openVideo = $('.video__watch'),
     modalVideo = $('.modal-video'),
     modalWp = $('.modal-wp'),
     closeModalVideo = $('.modal-video__close'), 
