@@ -1,12 +1,7 @@
+//- Социальная иконка
 mixin social(href)
     a.soocial__link(href=href)
         div.soocial__icon(class!=attributes.class)
-
-
-mixin social__item()
-    li.social__item
-        block
-
 
 
 footer.footer.overlay 
@@ -20,7 +15,7 @@ footer.footer.overlay
                     | Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
                 ul.footer__links 
                     li.footer__item: a.footer__link(href="#") Help
-                    li.footer__item: a.footer__link(href="#") Terms & Condition
+                    li.footer__item: a.footer__link(href="#") Terms &amp; Condition
                     li.footer__item: a.footer__link(href="#") Privacy
             .col-12.col-md-6.col-lg-4.footer__block 
                 b.footer__headline Our studio
@@ -43,10 +38,10 @@ footer.footer.overlay
                     button.subscribe__btn(type="submit")
                         span.icon-paper
                 ul.social
-                    +social__item(): +social('#')(class='icon-facebook')
-                    +social__item(): +social('#')(class='icon-twitter')
-                    +social__item(): +social('#')(class='icon-dribbble')
-                    +social__item(): +social('#')(class='icon-instagram')
-                    +social__item(): +social('#')(class='icon-google')
-                    +social__item(): +social('#')(class='icon-youtube')
+                    li.social__item: +social('#')(class='icon-facebook')
+                    li.social__item: +social('#')(class='icon-twitter')
+                    li.social__item: +social('#')(class='icon-dribbble')
+                    li.social__item: +social('#')(class='icon-instagram')
+                    li.social__item: +social('#')(class='icon-google')
+                    li.social__item: +social('#')(class='icon-youtube')
                 small.footer__copyright Copyright © 2015 - Tajem Creative

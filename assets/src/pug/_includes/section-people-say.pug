@@ -1,3 +1,4 @@
+//- Отзыв
 mixin comment(name, profession)
     .comment
         if block
@@ -12,12 +13,7 @@ mixin comment(name, profession)
         p.comment__profession= profession
 
 
-
-mixin people-say__item()
-    li.people-say__item 
-        block 
-
-
+//- Элемент слайдера навигации (кнопка с фотографией автора отзыва)
 mixin userpic-dot(src)
     li.userpic-dot
         button.userpic-dot__btn 
@@ -33,11 +29,11 @@ section.people-say.overlay.anchor#people-say
         .row    
             .col-12.offset-md-1.col-md-10.people-say__list-wp
                 ul.people-say__list
-                    +people-say__item(): +comment('Jane Galadriel', 'Ceo tengkurep')
-                    +people-say__item(): +comment('Name', 'Profession')
-                    +people-say__item(): +comment('Name', 'Profession')
-                    +people-say__item(): +comment('Name', 'Profession')
-                    +people-say__item(): +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Jane Galadriel', 'Ceo tengkurep')
+                    li.people-say__item: +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Name', 'Profession')
         .row
             .col-12.offset-md-1.col-md-10.people-say__nav-slider-wp
                 ul.people-say__nav-slider

@@ -1,3 +1,4 @@
+//- Блок услуги 
 mixin service(title)
     .service
         .service__decor-img
@@ -8,7 +9,7 @@ mixin service(title)
         else
             p.service__text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
 
-
+//- Элемент списка услуг
 mixin expertise__item()
     li.col-12.col-sm-6.col-lg-4.expertise__item 
         block 
@@ -21,9 +22,9 @@ section.expertise.container.anchor#expertise
             p.expertise__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
     .expertise__list-wp
         ul.row.expertise__list
-            +expertise__item(): +service('Web design & development')(class='web')
-            +expertise__item(): +service('Branding identity')(class='identity')
-            +expertise__item(): +service('Mobile app')(class='modile')
-            +expertise__item(): +service('Search engine optimization')(class='optimize')
-            +expertise__item(): +service('Game development')(class='game')
-            +expertise__item(): +service('Made with love')(class='love')
+            +expertise__item(): +service('Web design & development')(class='icon-web')
+            +expertise__item(): +service('Branding identity')(class='icon-identity')
+            +expertise__item(): +service('Mobile app')(class='icon-modile')
+            +expertise__item(): +service('Search engine optimization')(class='icon-optimize')
+            +expertise__item(): +service('Game development')(class='icon-game')
+            +expertise__item(): +service('Made with love')(class='icon-love')
