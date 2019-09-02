@@ -1,3 +1,4 @@
+// Добавление класса 'scroll' для выпадающих элементов шапки
 
 var header = $('.header');
 
@@ -12,3 +13,4 @@ $(window).scroll(function () {
         header.removeClass('scroll');
     }
 });
+

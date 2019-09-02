@@ -1,4 +1,5 @@
 // Плавная прокрутка до якоря
+
 $(function () {
     $("a[href^='#']").click(function () {
         var _href = $(this).attr("href");
@@ -8,3 +9,4 @@ $(function () {
         return false;
     });
 });
+

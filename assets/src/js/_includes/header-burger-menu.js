@@ -1,3 +1,5 @@
+// Burger menu в шапке сайта
+
 var menuToggle = $(".burger"),
     menu = $(".site-nav__list");
 
@@ -14,3 +16,4 @@ $(document).click(function (event) {
     menuToggle.removeClass('open');
     event.stopPropagation();
 });
+
