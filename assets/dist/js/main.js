@@ -10367,7 +10367,7 @@ if ( !noGlobal ) {
 
 
 return jQuery;
-} );                          // jquery 3.3.1
+} );                      // jquery 3.3.1
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -13379,71 +13379,83 @@ return jQuery;
     };
 
 }));
-                           // slick slider 1.8.1
+                       // slick slider 1.8.1
 
 
 // Мой код
 $(document).ready(function() {
-    // Слайдер отзывов в блоке People say
+    
+// Слайдер отзывов в блоке People say
 
-var peopleSaySlider = $('.people-say__list'),
-  peopleSayNavSlider = $('.people-say__nav-slider'),
-  numberDotsPeopleSay = peopleSayNavSlider.find("li").length,
-  dotShowSmall = 3;
+var peopleSaySlider = $('.people-say__list'), // Слайдер отзывов
+  peopleSayNavSlider = $('.people-say__nav-slider'), // Слайдер фотографий, выполняет функцию dots для слайдера отзывов
+  numberDotsPeopleSay = peopleSayNavSlider.find("li").length, // Количество элементов в слайдере
+  dotShowSmall = 3; // Сколько dots будет показано в мобильной версии сайта
 
+
+// Если в слайдере меньше 3 элементов, 
+// то это количество и будет показано в мобильной версии сайта
 if (numberDotsPeopleSay < 3) {
   dotShowSmall = numberDotsPeopleSay;
 };
 
 
-peopleSaySlider.slick({ // это изначально slick слайдер для основного блока изображений
-  slidesToShow: 1, // по одному слайдеру 
-  slidesToScroll: 1, // по одному менять
-  arrows: false, // выключение стрелок 
-  asNavFor: peopleSayNavSlider, // навигация для слайдера 
-  draggable: false,
-  swipe: false,
-  mobileFirst: true,
+// Настройки слайдера отзывов
+peopleSaySlider.slick({
+  slidesToShow: 1, // Сколько элементов будет показано одновременно
+  slidesToScroll: 1, // Какое к-во слайдов будет прокручиваться за раз
+  arrows: false, // Отключить стрелки для переключения элементов слайдера
+  asNavFor: peopleSayNavSlider, // Связать со слайдером навигации  
+  draggable: false, // Нельзя переключать элементы, перетаскивая их мышкой 
+  swipe: false, // Нельзя переключать элементы, проводя пальцем по слайдеру
+  mobileFirst: true // Mobile first слайдер
 });
 
-peopleSayNavSlider.slick({ // настройка навигации
-  arrows: false, // выключение стрелок 
-  asNavFor: peopleSaySlider, // навигация для блока выше
-  focusOnSelect: true,
-  swipe: false,
-  centerMode: true,
-  mobileFirst: true,
 
-  slidesToShow: dotShowSmall,
+// Настройки слайдера навигации (dots)
+peopleSayNavSlider.slick({ // настройка навигации
+  arrows: false, // Отключить стрелки для переключения элементов слайдера
+  asNavFor: peopleSaySlider, // Связать со слайдером отзывов
+  focusOnSelect: true, // Фокусировка на активном элементе
+  draggable: false, // Нельзя переключать элементы, перетаскивая их мышкой 
+  swipe: false, // Нельзя переключать элементы, проводя пальцем по слайдеру
+  centerMode: true, // Активный слайд будет расположен по центру
+  mobileFirst: true, // Mobile first слайдер
+
+  slidesToShow: dotShowSmall, // Сколько элементов будет показано одновременно
 
   responsive: [{
-    breakpoint: 576,
+    breakpoint: 576, // Если ширина экрана больше 576px
     settings: {
-      slidesToShow: numberDotsPeopleSay,
+      slidesToShow: numberDotsPeopleSay, // Сколько элементов будет показано одновременно
     }
   }]
-});       // Слайдер отзывов в разделе People say
-    // Burger menu в шапке сайта
+});
+   // Слайдер отзывов в блоке People say
+    
+// Burger menu в шапке сайта
 
-var menuToggle = $(".burger"),
-    menu = $(".site-nav__list");
+var menuToggle = $(".burger"), // Кнопка открытия мобильной версии меню 
+    menu = $(".site-nav__list"); // Пункты меню в шапке сайта
 
 
+// При нажатии на кнопку burger открывается мобильная версия меню
 menuToggle.click(function () {
     menu.toggleClass('open');
     menuToggle.toggleClass('open');
-
 });
 
+
+// При клике на странице вне кнопки burger мобильная версия меню закрывается
 $(document).click(function (event) {
     if ($(event.target).closest(menuToggle).length) return;
     menu.removeClass('open');
     menuToggle.removeClass('open');
     event.stopPropagation();
 });
-
-      // Burger menu в шапке сайта
-    // Плавная прокрутка до якоря
+  // Burger menu в шапке сайта
+    
+// Плавная прокрутка до якоря
 
 $(function () {
     $("a[href^='#']").click(function () {
@@ -13454,52 +13466,59 @@ $(function () {
         return false;
     });
 });
-
-          // Плавная прокрутка до якоря
-    // Переключение активного пункта меню в шапке сайта при нажатии и прокрутке страницы
+      // Плавная прокрутка до якоря
+    
+// Переключение активного пункта меню в шапке сайта при нажатии и прокрутке страницы
 
 var positions = [], // позиции "якорных" блоков 
     currentActive = null, // id текущего блока 
     links = $('.site-nav__link'), // массив всех ссылок в шапке сайта
     anchor = $(".anchor"); // блоки, к которым ведут якорные ссылки в шапке сайта
 
+
+// При нажатии на пункт меню к нему добавляется класс "active"
 links.click(function () {
     links.removeClass('active');
     $(this).addClass('active');
 });
 
-//перебираем блоки, сохраняем позиции и ссылки на пункты меню
-anchor.each(function () { 
+
+// Перебор якорных блоков. Сохранение позиций и ссылок на пункты меню
+anchor.each(function () {
     positions.push({
         top: $(this).position().top - 100,
         a: links.filter('[href="#' + $(this).attr('id') + '"]')
     });
 });
 
-//делаем реверс массива, чтобы при скролле перебирать его с конца и выходить из цикла при нахождении
-//зачем нам проверять каждый блок, если прокрутка уже ниже последнего, верно?
+
+// Массив позиций якорных блоков в обратном порядке
 positions = positions.reverse();
 
+
+// При прокрутке страницы изменять активный пункт меню в шапке
 $(window).on('scroll', function () {
     var winTop = $(window).scrollTop();
     for (var i = 0; i < positions.length; i++) {
-        if (positions[i].top < winTop) { //если прокрутка страницы ниже нашего блока
-            if (currentActive !== i) { //и если мы еще не добавили класс текущему блоку
+        if (positions[i].top < winTop) { // если прокрутка страницы ниже текущего блока
+            if (currentActive !== i) { // если к текущему блоку ещё не добавлен класс 
                 currentActive = i;
-                links.filter('.active').removeClass('active'); //снимаем класс .active с текущего пункта меню
+                links.filter('.active').removeClass('active'); // снять класс "active" с текущего пункта меню
                 positions[i].a.addClass("active");
             }
-            break; //выходим из цикла, не нужно проверять блоки, которые выше
+            break; // выйти из цикла, чтобы не проверять блоки выше текущего 
         }
     }
 });
+  // Переключение активного пункта меню в шапке 
+    
+// При проктутке страницы вниз у шапки сайта появляется полупрозрачный фон
 
-      // Переключение активных элементов навигации в шапке
-    // Добавление класса 'scroll' для выпадающих элементов шапки
-
-var header = $('.header');
+var header = $('.header'); // Шапка сайта
 
 
+// При проктутке страницы на 100px вниз к header добавляется класс "scroll"
+// У "scroll" в стилях прописан полупрозрачный фон
 $(window).scroll(function () {
     var top = $(document).scrollTop();
     var height = 100;
@@ -13510,26 +13529,28 @@ $(window).scroll(function () {
         header.removeClass('scroll');
     }
 });
+       // При проктутке страницы вниз у шапки появляется фон
+    
+// Открытие модального окна с видео 
 
-           // Добавление класса 'scroll' для выпадающих элементов шапки
-    // Модальное окно в разделе Video
-
-var openVideo = $('.video__watch'),
-    modalVideo = $('.modal-video'),
-    modalWp = $('.modal-wp'),
-    closeModalVideo = $('.modal-video__close'), 
-    videoIframe = $('.modal-video__video');
+var openVideo = $('.video__watch'), // Блок, при нажатии на который появляется модальное окно, содержит кнопку и заголовок
+    modalVideo = $('.modal-video'), // Модальное окно с видео
+    modalWp = $('.modal-wp'), // Обёртка модального окна для затемнения экрана 
+    closeModalVideo = $('.modal-video__close'), // Кнопка закрытия модального окна
+    videoIframe = $('.modal-video__video'); // Видео в модальном окне
 
 
+// При клике на блок появляется модальное окно
 openVideo.click(function () {
     modalWp.toggleClass('open');
 });
 
+// При нажатии на кнопку закрытия модальное окно исчезает, 
+// а воспроизведение видео останавливается
 closeModalVideo.click(function () {
     modalWp.removeClass('open');
-    videoIframe.attr("src", videoIframe.attr("src")); // Остановить воспроизведение видео при закрытии модального окна
+    videoIframe.attr("src", videoIframe.attr("src")); // остановить воспроизведение видео 
 });
-
-             // Модальное окно в разделе Video
+         // Открытие модального окна с видео 
     
 });
