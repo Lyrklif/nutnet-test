@@ -21,7 +21,7 @@ peopleSaySlider.slick({ // это изначально slick слайдер дл
   draggable: false,
   swipe: false,
   mobileFirst: true,
-  initialSlide: 0,
+  initialSlide: 2,
 });
 
 peopleSayNavSlider.slick({ // настройка навигации
@@ -33,11 +33,13 @@ peopleSayNavSlider.slick({ // настройка навигации
   mobileFirst: true,
 
   slidesToShow: dotShowSmall,
+  initialSlide: 2,
 
   responsive: [{
-    breakpoint: 540,
+    breakpoint: 576,
     settings: {
       slidesToShow: numberDotsPeopleSay,
     }
-  }]
+  }
+]
 });

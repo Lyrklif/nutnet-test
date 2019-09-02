@@ -5,7 +5,7 @@
 
 // Подключение бибилиотек
 @@include('assets/src/js/_libs/jquery.js')                          // jquery 3.3.1
-@@include('assets/src/js/_libs/slick.min.js')                       // slick slider
+@@include('assets/src/js/_libs/slick.js')                           // slick slider 1.8.1
 
 
 // Мой код
