@@ -1,24 +1,24 @@
+
 // Подключение всех scss-файлов
 
 
 // Библиотеки и переменные
-@import '_libs/normalize.scss';                      // Сброс стилей
-@import '_components/_variables.scss';               // Переменные
-@import '_libs/bootstrap-4.3.1-scss/bootstrap.scss'; // Тут закомментированы лишние модули
-@import '_libs/slick.scss';                          // Стили слайдеров
-
+@import '_libs/normalize.scss';                     // Сброс стилей
+@import '_components/variables.scss';               // Переменные
+@import '_libs/bootstrap-4.3.1-scss/bootstrap.scss';// Тут закомментированы лишние модули
+@import '_libs/slick.scss';                         // Стили слайдеров
 
 
 // Компоненты
-@import '_components/_functions.scss';		       	// Функции 
-@import '_components/_my-style.scss'; 		       	// Основные стили
+@import '_components/functions.scss';		       	// Функции 
+@import '_components/my-style.scss'; 		       	// Основные стили
 @import '_components/sprite.scss'; 			       	// Css спрайт иконки
 
 
 // Стили отдельных блоков
 @import '_blocks/header.scss'; 				       	// Стили header
 @import '_blocks/section-home.scss'; 		       	// Стили первого блока сайта 
-@import '_blocks/section-about.scss'; 		       	// Стили раздела About, заголовок "Our story"
+@import '_blocks/section-about.scss'; 		       	// Стили раздела About 
 @import '_blocks/section-video.scss'; 		       	// Стили раздела Video 
 @import '_blocks/section-expertise.scss'; 	       	// Стили раздела Expertise
 @import '_blocks/section-team.scss'; 		        // Стили раздела Team
@@ -26,6 +26,4 @@
 @import '_blocks/section-people-say.scss'; 	       	// Стили раздела People say
 @import '_blocks/section-contact.scss'; 	       	// Стили раздела Contact
 @import '_blocks/footer.scss'; 		                // Стили footer  
-@import '_blocks/modal-video.scss'; 		        // Стили модального окна раздела video
-
-
+@import '_blocks/modal-video.scss'; 		        // Стили модального окна раздела Video
