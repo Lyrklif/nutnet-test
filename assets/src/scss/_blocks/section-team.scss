@@ -37,7 +37,8 @@
 
 .team-member {
     transition: .3s ease-in-out;
-    margin-bottom: 70px;
+    max-width: 265px;
+    margin: 0 auto 70px auto;
 
     &:hover {
         background: rgba(255, 255, 255, .1);

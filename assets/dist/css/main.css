@@ -3710,7 +3710,8 @@ body {
 .team-member {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-  margin-bottom: 70px; }
+  max-width: 265px;
+  margin: 0 auto 70px auto; }
   .team-member:hover {
     background: rgba(255, 255, 255, 0.1); }
 
