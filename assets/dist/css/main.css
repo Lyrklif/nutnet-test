@@ -3246,57 +3246,93 @@ body {
 
 .icon-facebook {
   background-image: url("../img/icons-sprite.png");
-  background-position: -56px 0px;
+  background-position: -140px -42px;
   width: 7px;
   height: 15px; }
 
 .icon-twitter {
   background-image: url("../img/icons-sprite.png");
-  background-position: -17px -41px;
+  background-position: -60px -96px;
   width: 14px;
   height: 11px; }
 
 .icon-dribbble {
   background-image: url("../img/icons-sprite.png");
-  background-position: 0px -25px;
+  background-position: -64px -75px;
   width: 16px;
   height: 16px; }
 
 .icon-instagram {
   background-image: url("../img/icons-sprite.png");
-  background-position: -16px -25px;
+  background-position: -80px -75px;
   width: 15px;
   height: 15px; }
 
 .icon-google {
   background-image: url("../img/icons-sprite.png");
-  background-position: -31px -25px;
+  background-position: -28px -96px;
   width: 15px;
   height: 14px; }
 
 .icon-youtube {
   background-image: url("../img/icons-sprite.png");
-  background-position: 0px -41px;
+  background-position: -43px -96px;
   width: 17px;
   height: 11px; }
 
 .icon-point {
   background-image: url("../img/icons-sprite.png");
-  background-position: -42px 0px;
+  background-position: -50px -75px;
   width: 14px;
   height: 19px; }
 
 .icon-telephone {
   background-image: url("../img/icons-sprite.png");
-  background-position: -25px 0px;
+  background-position: -75px -50px;
   width: 17px;
   height: 17px; }
 
 .icon-paper {
   background-image: url("../img/icons-sprite.png");
-  background-position: 0px 0px;
+  background-position: -50px -50px;
   width: 25px;
   height: 25px; }
+
+.icon-web {
+  background-image: url("../img/icons-sprite.png");
+  background-position: -50px 0px;
+  width: 49px;
+  height: 50px; }
+
+.icon-identity {
+  background-image: url("../img/icons-sprite.png");
+  background-position: -99px 0px;
+  width: 50px;
+  height: 42px; }
+
+.icon-modile {
+  background-image: url("../img/icons-sprite.png");
+  background-position: 0px -96px;
+  width: 28px;
+  height: 50px; }
+
+.icon-optimize {
+  background-image: url("../img/icons-sprite.png");
+  background-position: 0px 0px;
+  width: 50px;
+  height: 50px; }
+
+.icon-game {
+  background-image: url("../img/icons-sprite.png");
+  background-position: -99px -42px;
+  width: 41px;
+  height: 50px; }
+
+.icon-love {
+  background-image: url("../img/icons-sprite.png");
+  background-position: 0px -50px;
+  width: 50px;
+  height: 46px; }
 
 .header {
   position: fixed;
@@ -3642,42 +3678,6 @@ body {
   height: 60px; }
   .service__decor-img > div {
     margin: 0 auto; }
-
-.service__decor-img > .web {
-  background-image: url("../img/service-sprite.png");
-  background-position: -50px 0px;
-  width: 49px;
-  height: 50px; }
-
-.service__decor-img > .identity {
-  background-image: url("../img/service-sprite.png");
-  background-position: -99px 0px;
-  width: 50px;
-  height: 42px; }
-
-.service__decor-img > .modile {
-  background-image: url("../img/service-sprite.png");
-  background-position: 0px -96px;
-  width: 28px;
-  height: 50px; }
-
-.service__decor-img > .optimize {
-  background-image: url("../img/service-sprite.png");
-  background-position: 0px 0px;
-  width: 50px;
-  height: 50px; }
-
-.service__decor-img > .game {
-  background-image: url("../img/service-sprite.png");
-  background-position: -99px -42px;
-  width: 41px;
-  height: 50px; }
-
-.service__decor-img > .love {
-  background-image: url("../img/service-sprite.png");
-  background-position: 0px -50px;
-  width: 50px;
-  height: 46px; }
 
 .team {
   padding-top: 67px;
