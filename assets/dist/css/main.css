@@ -4280,20 +4280,22 @@ body {
       width: 580px;
       height: 380px; } }
 
-.modal-video__content {
-  margin-top: 10px; }
-
 .modal-video__close {
   font-size: 20px;
   font-weight: 900;
   background: none;
   border: none;
-  margin: 0 0 0 auto;
+  margin: 0 0 10px auto;
   display: block; }
 
 .modal-video__video {
   border: none;
-  max-height: 100%;
+  width: 480px;
+  height: 235px;
+  display: block;
   max-width: 100%;
-  width: 560px;
-  height: 315px; }
+  max-height: 100%; }
+  @media (min-width: 768px) {
+    .modal-video__video {
+      width: 560px;
+      height: 315px; } }
