@@ -1,4 +1,4 @@
-**Ссылка** - https://lyrklif.github.io/nutnet-test/assets/build/  
+**Ссылка** - https://lyrklif.github.io/nutnet-test/assets/dist/  
   
 
 # nutnet-test
