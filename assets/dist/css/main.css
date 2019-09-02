@@ -224,7 +224,7 @@ font-weight
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 960px; } }
+      max-width: 1140px; } }
 
 .container-fluid {
   width: 100%;
@@ -3400,7 +3400,7 @@ body {
 .burger__line:before {
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-backface-visibility: hidden;
@@ -3436,7 +3436,7 @@ body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  margin-top: 0px;
+  margin-top: 0;
   line-height: 1.714; }
 
 .home__btn {
@@ -3501,7 +3501,7 @@ body {
 
 .video__watch {
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   background: none;
   border: none;
@@ -3720,7 +3720,7 @@ body {
   max-height: 228px;
   max-width: 100%;
   width: 100%;
-  background: #fff;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3938,9 +3938,10 @@ body {
   .people-say__nav-slider .slick-list .slick-track .slick-current div .userpic-dot .userpic-dot__img {
     width: 100%;
     height: 100%; }
-  .people-say__nav-slider .slick-list .slick-track {
-    -webkit-transform: none !important;
-            transform: none !important; }
+  @media (min-width: 576px) {
+    .people-say__nav-slider .slick-list .slick-track {
+      -webkit-transform: none !important;
+              transform: none !important; } }
 
 .userpic-dot__btn {
   padding: 0;
@@ -4024,7 +4025,7 @@ body {
   margin-bottom: 17px; }
 
 .footer {
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 65px;
   font-size: 14px; }
   .footer:before {
@@ -4070,7 +4071,7 @@ body {
       margin-top: 69px; } }
 
 .footer__link {
-  color: #fff;
+  color: #ffffff;
   margin-right: 20px; }
   @media (min-width: 992px) {
     .footer__link {
@@ -4114,7 +4115,7 @@ body {
   margin-top: 15px;
   letter-spacing: .25px; }
   .footer__tel a {
-    color: #fff; }
+    color: #ffffff; }
 
 @media (min-width: 992px) {
   .footer__block-3 {
@@ -4207,7 +4208,7 @@ body {
           align-items: center;
   height: 35px;
   width: 35px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 50%; }
   .soocial__link:hover {
     background: rgba(255, 255, 255, 0.1); }
@@ -4269,7 +4270,7 @@ body {
     display: flex; }
 
 .modal-video {
-  background: #fff;
+  background: #ffffff;
   padding: 10px;
   border-radius: 5px;
   max-width: 100%;

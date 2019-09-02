@@ -2,10 +2,7 @@
 
 .home {
     text-align: center;
-    // background: #332a54;
     color: $text-on-dark-bg;
-
-    // padding: 228px 0 218px 0;
     padding: 222px 0 207px 0;
 
     &:before {
@@ -25,7 +22,7 @@
     font-size: 14px;
     font-family: $font-family1;
     font-weight: 300;
-    margin-top: 0px;
+    margin-top: 0;
     line-height: 1.714;
 }
 

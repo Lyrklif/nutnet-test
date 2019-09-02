@@ -1,5 +1,5 @@
 .footer {
-    color: #fff;
+    color: $text-on-dark-bg;
     padding-bottom: 65px;
     font-size: 14px;
 
@@ -42,7 +42,7 @@
 
 
 .footer__link {
-    color: #fff;
+    color: $text-on-dark-bg;
     margin-right: 20px;
 
     @include media-breakpoint-up(lg) {
@@ -89,7 +89,7 @@
     letter-spacing: .25px;
 
     a {
-        color: #fff;
+        color: $text-on-dark-bg;
     }
 }
 
@@ -177,7 +177,7 @@
     align-items: center;
     height: 35px;
     width: 35px;
-    border: 1px solid #fff;
+    border: 1px solid $white-color;
     border-radius: 50%;
 
     &:hover {

@@ -130,7 +130,7 @@
 .burger__line:before {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $white-color;
     transition: all 0.3s;
     backface-visibility: hidden;
     border-radius: 2px;

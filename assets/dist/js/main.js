@@ -13395,9 +13395,6 @@ if (numberDotsPeopleSay < 3) {
   dotShowSmall = numberDotsPeopleSay;
 };
 
-if (numberDotsPeopleSay > 5) {
-  numberDotsPeopleSay = 5;
-};
 
 peopleSaySlider.slick({ // это изначально slick слайдер для основного блока изображений
   slidesToShow: 1, // по одному слайдеру 
@@ -13407,27 +13404,24 @@ peopleSaySlider.slick({ // это изначально slick слайдер дл
   draggable: false,
   swipe: false,
   mobileFirst: true,
-  initialSlide: 2,
 });
 
 peopleSayNavSlider.slick({ // настройка навигации
   arrows: false, // выключение стрелок 
   asNavFor: peopleSaySlider, // навигация для блока выше
-  focusOnSelect: true, 
+  focusOnSelect: true,
   swipe: false,
-  centerMode:true,
+  centerMode: true,
   mobileFirst: true,
 
   slidesToShow: dotShowSmall,
-  initialSlide: 2,
 
   responsive: [{
     breakpoint: 576,
     settings: {
       slidesToShow: numberDotsPeopleSay,
     }
-  }
-]
+  }]
 });       // Слайдер отзывов в разделе People say
     // Burger menu в шапке сайта
 

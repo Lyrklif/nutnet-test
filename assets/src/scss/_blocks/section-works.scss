@@ -5,7 +5,7 @@
 
 
 .works__header {
-    color: #413d4b;
+    color: $works-header-color;
     margin-bottom: 65px;
     letter-spacing: .5px;
 
@@ -38,7 +38,7 @@
 
     &:after {
         content: '';
-        border: 1px solid #413d4b;
+        border: 1px solid $works-border-color;
         height: .7em;
         width: .7em;
         margin-left: 10px;

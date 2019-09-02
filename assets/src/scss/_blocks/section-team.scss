@@ -25,7 +25,7 @@
 
 .team__subtitle {
     font-size: 14px;
-    color: #f9f9f9;
+    color: $team-member-subtitle-color;
     margin-top: 12px;
     letter-spacing: .75px;
 }
@@ -49,7 +49,7 @@
     max-height: 228px;
     max-width: 100%;
     width: 100%;
-    background: #fff;
+    background: $white-color;
 
     display: flex;
     justify-content: center;
@@ -64,8 +64,8 @@
 
 .team-member__text-wp {
     font-family: $font-family1;
-    border: 1px solid rgba(225, 225, 225, .5);
-    border-top-color: #e6e6e8;
+    border: 1px solid $team-member-border-color-1;
+    border-top-color: $team-member-border-color-2;
     text-transform: uppercase;
     padding: 17px 20px 24px 20px;
 }
@@ -80,7 +80,7 @@
 
 .team-member__profession {
     font-weight: 300;
-    color: #fafafa;
+    color: $team-member-profession-color;
     font-size: 13px;
     margin-bottom: 0;
     margin-top: 0;
@@ -90,7 +90,7 @@
 .team__text {
     margin-top: 0;
     margin-bottom: 29px;
-    color: #f3f3f3;
+    color: $team-member-text-color;
     font-weight: 300;
     font-size: 14px;
     font-family: $font-family1;
