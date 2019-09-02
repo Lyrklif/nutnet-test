@@ -1,12 +1,13 @@
-// .works {
-//     padding-top: 70px;
-//     padding-bottom: 70px;
-// }
+.works {
+    padding-top: 65px;
+    // padding-bottom: 70px;
+}
 
 
 .works__header {
     color: #413d4b;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
+    letter-spacing: .5px;
 
     @include media-breakpoint-up(sm) {
         display: flex;
@@ -21,6 +22,7 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 0;
+    
 
     @include media-breakpoint-up(sm) {
         margin-bottom: 0;
@@ -95,6 +97,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 100%; // пропорции блока 
+    padding-bottom: 89%; // пропорции блока 
 
     &:hover,
     &:focus {
@@ -126,5 +129,9 @@
 
 .works__btn-wp {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 55px;    
+}
+
+.works__btn {
+    min-width: 140px;
 }

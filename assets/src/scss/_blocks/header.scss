@@ -2,12 +2,15 @@
 .header {
     position: fixed;
     top: 0;
-    background: rgba(63, 52, 98, .8);
     width: 100%;
     z-index: 999;
 
     padding-bottom: 15px;
     padding-top: 15px;
+
+    &.scroll {
+        background: rgba(49, 29, 94, .85);
+    }
 }
 
 
@@ -26,6 +29,7 @@
 .site-nav__link {
     color: $white-color;
     text-transform: uppercase;
+    letter-spacing: .25px;
 
     &:hover {
         color: lighten($site-nav-active-color, 80%);
@@ -71,6 +75,9 @@
     background: rgba(63, 52, 98, .95);
     z-index: 999;
     padding: 20px 0;
+
+    overflow-y: scroll;
+    max-height: 100vh;
 
     .site-nav__item {
         margin: 0;

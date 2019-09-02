@@ -1,9 +1,14 @@
 // Стили раздела About, заголовок "Our story"
 
-// .about {
-//     padding-top: 70px;
-//     padding-bottom: 70px;
-// }
+.about {
+    padding-top: 65px;
+    // padding-bottom: 70px;
+}
+
+.about__decor-img-wp {
+    padding-left: 0;
+    padding-top: 5px;
+}
 
 .about__decor-img {
     background-image: url($image_dir + 'about-decor.png' );
@@ -23,6 +28,7 @@
     color: $about-title-color;
     font-weight: 700;
     margin-top: 0;
+    text-transform: uppercase;
 }
 
 .about__text {
@@ -31,6 +37,10 @@
     color: rgba(65, 61, 75, .749);
     line-height: 1.571;
     font-weight: 300;
-    margin-bottom: 35px;
-    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.about__btn {
+    margin-top: 5px;
 }

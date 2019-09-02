@@ -1,9 +1,6 @@
-
-
 .footer {
     color: #fff;
-    // padding-top: 70px;
-    // padding-bottom: 70px;
+    padding-bottom: 65px;
     font-size: 14px;
 
     &:before {
@@ -12,22 +9,23 @@
 }
 
 .footer__text {
-    // font-size: 14px;
     line-height: 1.857;
     font-weight: 300;
+    margin-top: 18px;
+    letter-spacing: .25px;
 }
 
 .footer__links {
-    // font-size: 14px;
     line-height: 1.857;
     text-transform: uppercase;
-
+    margin-top: 69px;
+    letter-spacing: .25px;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.footer__item {
-    display: inline-block;
-    margin-right: 32px;
-}
 
 .footer__link {
     color: #fff;
@@ -37,19 +35,23 @@
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 900;
+    margin-top: 18px;
+    display: block;
+    letter-spacing: .5px;
 }
 
 .footer__address {
-    // font-size: 14px;
     line-height: 1.857;
     font-weight: 300;
     font-style: normal;
     display: flex;
+    margin-top: 32px;
+    letter-spacing: .25px;
 }
 
 .footer__icon-wp {
     position: relative;
-    width: 30px;
+    width: 28px;
     height: 100%;
     display: block;
     padding-top: 3px;
@@ -60,20 +62,30 @@
     font-weight: 300;
     font-style: normal;
     display: flex;
+    margin-top: 15px;
+    letter-spacing: .25px;
 
     a {
         color: #fff;
     }
 }
 
+
+.footer__block-3 {
+    padding-left: 20px;
+}
+
 .subscribe {
     display: flex;
     align-items: center;
+
+    margin-top: 35px;
+    margin-bottom: 27px;
+
 }
 
 .subscribe__input {
     background: none;
-    // padding: 17px 16px;
     padding-left: 16px;
     padding-right: 16px;
     border: 1px solid rgba(255, 255, 255, .5);
@@ -81,8 +93,8 @@
     max-width: 210px;
     margin-right: 10px;
     height: 45px;
-    // display: inline-block;
     color: rgba(255, 255, 255, .75);
+    letter-spacing: .5px;
 
     &::placeholder {
         color: rgba(255, 255, 255, .75);
@@ -97,7 +109,7 @@
 .subscribe__btn {
     border: none;
     background: rgba(255, 255, 255, .5);
-    width: 68px;
+    width: 70px;
     height: 45px;
     display: flex;
     align-items: center;
@@ -111,6 +123,10 @@
 
 .footer__copyright {
     font-size: 14px;
+    text-align: right;
+    margin-top: 62px;
+    display: block;
+    letter-spacing: .25px;
 }
 
 

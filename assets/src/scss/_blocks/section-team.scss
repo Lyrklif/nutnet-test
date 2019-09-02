@@ -1,5 +1,5 @@
 .team {
-    // padding-top: 70px;
+    padding-top: 67px;
     // padding-bottom: 70px;
     text-align: center;
 
@@ -18,15 +18,20 @@
     color: $text-on-dark-bg;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: .5px;
 }
 
 .team__subtitle {
     font-size: 14px;
     color: #f9f9f9;
+    margin-top: 12px;
+    letter-spacing: .75px;
 }
 
 .team__list {
-    margin-top: 47px;
+    margin-top: 40px;
     margin-bottom: 0;
 }
 
@@ -40,8 +45,8 @@
 }
 
 .team-member__foto-wp {
-    height: 230px;
-    max-height: 230px;
+    height: 228px;
+    max-height: 228px;
     max-width: 100%;
     width: 100%;
     background: #fff;
@@ -60,8 +65,9 @@
 .team-member__text-wp {
     font-family: $font-family1;
     border: 1px solid rgba(225, 225, 225, .5);
+    border-top-color: #e6e6e8;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 17px 20px 24px 20px;
 }
 
 .team-member__name {
@@ -69,6 +75,7 @@
     color: $text-on-dark-bg;
     font-weight: 900;
     margin-top: 0;
+    margin-bottom: 6px;
 }
 
 .team-member__profession {
@@ -76,6 +83,7 @@
     color: #fafafa;
     font-size: 13px;
     margin-bottom: 0;
+    margin-top: 0;
     //   color: rgba(250, 250, 250, 0.702);
 }
 
@@ -86,6 +94,8 @@
     font-weight: 300;
     font-size: 14px;
     font-family: $font-family1;
+    letter-spacing: .5px;
+    margin-bottom: 24px;
 }
 
 .team__btn {

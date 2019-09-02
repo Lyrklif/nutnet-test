@@ -1,26 +1,28 @@
 .contact {
     text-align: center;
 
-    // padding-top: 70px;
+    padding-top: 65px;
     // padding-bottom: 70px;
 }
 
 .contact__title {
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     font-size: 22px;
     font-family: $font-family3;
     color: $basic-color-2;
     font-weight: 700;
     text-transform: uppercase;
+
+    letter-spacing: .5px;
 }
 
 .feedback__input,
 .feedback__massage {
     width: 100%;
     margin-bottom: 21px;
-    padding: 17px 20px;
+    padding: 15px 20px 13px 20px;
     border: 1px solid #e5e5e5;
 
     font-size: 14px;
@@ -36,4 +38,6 @@
 .feedback__massage {
     height: 200px;
     resize: none;
+    padding-top: 18px;
+    margin-bottom: 17px;
 }

@@ -1,6 +1,7 @@
 mixin service(title)
     .service
-        .service__decor-img&attributes(attributes)
+        .service__decor-img
+            div&attributes(attributes)
         h3.service__title= title
         if block
             block

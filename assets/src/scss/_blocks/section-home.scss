@@ -5,7 +5,8 @@
     // background: #332a54;
     color: $text-on-dark-bg;
 
-    padding: 228px 0 218px 0;
+    // padding: 228px 0 218px 0;
+    padding: 222px 0 207px 0;
 
     &:before {
         background-image: url( $image_dir + 'home-bg.png' );
@@ -17,15 +18,17 @@
     font-family: $font-family3;
     font-weight: 900;
     text-transform: capitalize;
+    margin-top: 0;
 }
 
 .home__text {
     font-size: 14px;
     font-family: $font-family1;
     font-weight: 300;
-    margin-top: 30px;
+    margin-top: 0px;
+    line-height: 1.714;
 }
 
 .home__btn {
-    margin-top: 52px;
+    margin-top: 34px;
 }
