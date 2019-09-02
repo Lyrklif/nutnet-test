@@ -5,10 +5,8 @@
 }
 
 .video__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 550px;
+    padding-top: (550px-152px)/2;
 }
 
 .video__watch {
