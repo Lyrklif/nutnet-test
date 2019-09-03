@@ -3524,7 +3524,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px; }
 
-.row:before, .row:after {
+.row:before,
+.row:after {
   display: none !important; }
 
 .about,
@@ -3536,16 +3537,41 @@ body {
 .footer {
   padding-top: 50px;
   padding-bottom: 50px; }
-  @media (min-width: 576px) {
-    .about,
-    .expertise,
-    .team,
-    .works,
-    .people-say,
-    .contact,
-    .footer {
-      padding-top: 70px;
-      padding-bottom: 70px; } }
+
+@media (min-width: 576px) {
+  .about {
+    padding-top: 65px;
+    padding-bottom: 70px; } }
+
+@media (min-width: 576px) {
+  .contact {
+    padding-top: 65px;
+    padding-bottom: 70px; } }
+
+@media (min-width: 576px) {
+  .expertise {
+    padding-top: 66px;
+    padding-bottom: 75px; } }
+
+@media (min-width: 576px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 65px; } }
+
+@media (min-width: 576px) {
+  .people-say {
+    padding-top: 70px;
+    padding-bottom: 76px; } }
+
+@media (min-width: 576px) {
+  .team {
+    padding-top: 67px;
+    padding-bottom: 70px; } }
+
+@media (min-width: 576px) {
+  .works {
+    padding-top: 65px;
+    padding-bottom: 70px; } }
 
 .link-btn {
   display: inline-block;
@@ -3853,9 +3879,6 @@ body {
 .home__btn {
   margin-top: 34px; }
 
-.about {
-  padding-top: 65px; }
-
 @media (min-width: 768px) {
   .about__decor-img-wp {
     padding-left: 0;
@@ -3991,9 +4014,7 @@ body {
   margin-left: 0px; }
 
 .expertise {
-  text-align: center;
-  padding-top: 66px;
-  padding-bottom: 75px; }
+  text-align: center; }
 
 .expertise__header {
   font-family: "Playfair Display", serif; }
@@ -4053,7 +4074,6 @@ body {
     margin: 0 auto; }
 
 .team {
-  padding-top: 67px;
   text-align: center; }
   .team:before {
     background-image: url("../img/team-bg.png"); }
@@ -4146,9 +4166,6 @@ body {
 
 .team__btn {
   min-width: 140px; }
-
-.works {
-  padding-top: 65px; }
 
 .works__header {
   color: #413d4b;
@@ -4374,8 +4391,7 @@ body {
       width: 45px; } }
 
 .contact {
-  text-align: center;
-  padding-top: 65px; }
+  text-align: center; }
 
 .contact__title {
   margin-top: 0;
@@ -4419,7 +4435,6 @@ body {
 
 .footer {
   color: #ffffff;
-  padding-bottom: 65px;
   font-size: 14px; }
   .footer:before {
     background-image: url("../img/footer-bg.png"); }
