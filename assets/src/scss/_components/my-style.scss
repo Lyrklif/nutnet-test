@@ -31,7 +31,10 @@ body {
 }
 
 // для safari
-.row:before, .row:after {display: none !important;}
+.row:before,
+.row:after {
+    display: none !important;
+}
 
 // *************************************
 
@@ -45,10 +48,55 @@ body {
 .footer {
     padding-top: $section-padding - 20px;
     padding-bottom: $section-padding - 20px;
+}
 
+.about {
+    @include media-breakpoint-up(sm) {
+        padding-top: 65px;
+        padding-bottom: $section-padding;
+    }
+}
+
+.contact {
+    @include media-breakpoint-up(sm) {
+        padding-top: 65px;
+        padding-bottom: $section-padding;
+    }
+}
+
+.expertise {
+    @include media-breakpoint-up(sm) {
+        padding-top: 66px;
+        padding-bottom: 75px;
+    }
+}
+
+.footer {
     @include media-breakpoint-up(sm) {
         padding-top: $section-padding;
-    padding-bottom: $section-padding;
+        padding-bottom: 65px;
+    }
+}
+
+.people-say {
+    @include media-breakpoint-up(sm) {
+        padding-top: $section-padding;
+        padding-bottom: 76px;
+    }
+}
+
+.team {
+    @include media-breakpoint-up(sm) {
+        padding-top: 67px;
+        padding-bottom: $section-padding;
+    }
+}
+
+.works {
+
+    @include media-breakpoint-up(sm) {
+        padding-top: 65px;
+        padding-bottom: $section-padding;
     }
 }
 
@@ -113,9 +161,9 @@ body {
 //      }
 // }
 .overlay {
-    background: rgba(49,29,94, .85);
-    background: linear-gradient(0deg, rgba(9,5,47, .85) 0%, rgba(49,29,94, .85) 100%);
-    
+    background: rgba(49, 29, 94, .85);
+    background: linear-gradient(0deg, rgba(9, 5, 47, .85) 0%, rgba(49, 29, 94, .85) 100%);
+
 
     position: relative;
 
