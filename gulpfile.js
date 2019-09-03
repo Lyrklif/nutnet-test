@@ -61,18 +61,6 @@ gulp.task('webserver', function() {
     webserver(config);
 });
 
-// сбор html
-// gulp.task('html:dist', function() {
-//     return gulp.src(path.src.html) // выбор всех html файлов по указанному пути
-//         .pipe(plumber()) // отслеживание ошибок
-//         .pipe(fileinclude({ // импорт вложений
-//             prefix: '@@',
-//             basepath: path.src.baseDir
-//         }))
-//         .pipe(gulp.dest(path.dist.html)) // выкладывание готовых файлов
-//         .pipe(webserver.reload({ stream: true })); // перезагрузка сервера
-// });
-
 
 // сбор html из pug-файлов
 gulp.task('html:dist', function() {
@@ -90,7 +78,7 @@ gulp.task('css:dist', function() {
         .pipe(plumber()) // для отслеживания ошибок
         .pipe(sourcemaps.init()) // инициализируем sourcemap
         .pipe(sass()) // scss -> css
-        .pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] })) // добавим префиксы
+        .pipe(autoprefixer({ overrideBrowserslist: ['last 25 versions'] })) // добавим префиксы
         .pipe(gulp.dest(path.dist.css))
         .pipe(rename({ suffix: '.min' }))
         .pipe(cleanCSS()) // минимизируем CSS

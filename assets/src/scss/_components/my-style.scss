@@ -30,6 +30,9 @@ body {
     font-size: $browser-context;
 }
 
+// для safari
+.row:before, .row:after {display: none !important;}
+
 // *************************************
 
 // Отступы у блоков (section)
