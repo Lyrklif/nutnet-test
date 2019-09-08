@@ -1,12 +1,12 @@
 doctype html
         
-html(lang="en")
+html(lang="ru")
     //- Шрифты
-    - font1= 'Roboto:100,100i,300,400,500,700,900'
-    - font2= 'Hammersmith+One'
-    - font3= 'Playfair+Display:400,700,900'
+    - font1= 'Roboto:300,400,500,700,900'
+    //- - font2= 'Hammersmith+One'
+    //- - font3= 'Playfair+Display:400,700,900'
     - symbol= '%7C'
-    - allFonts= font1+symbol+font2+symbol+font3
+    - allFonts= font1
 
     head
         meta(charset="utf-8")
@@ -18,10 +18,8 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=" + allFonts +"&display=swap")
         link(rel="stylesheet" href="css/main.min.css")
     body
-        include ../_includes/header 
 
         main.main
             block content
 
-        include ../_includes/footer
         script(src='js/main.min.js')

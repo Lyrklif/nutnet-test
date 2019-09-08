@@ -1,0 +1,8 @@
+mixin section(sectionNumberTask, sectionText) 
+    section.section.container(class!=attributes.class)
+        .row
+            header.section__header.col
+                h2.section__title 
+                    span.section__number-task=sectionNumberTask
+                    =sectionText
+        block 

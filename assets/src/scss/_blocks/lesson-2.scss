@@ -1,0 +1,6 @@
+.lesson-2__block {
+    height: 100px;
+    width: 300px;
+    outline: 5px solid $basic-color-1;
+    background: lighten($basic-color-1, 25%);
+}
