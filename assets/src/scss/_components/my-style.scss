@@ -28,37 +28,77 @@ img {
 body {
     font-family: $font-family1;
     font-size: $browser-context;
-    padding: 50px 0;
-    background: $basic-color-4;
+}
+
+// для safari
+.row:before,
+.row:after {
+    display: none !important;
 }
 
 
 // *************************************
 
-.section {
-    margin-bottom: 50px;
+// Отступы у блоков (section)
+.about,
+.expertise,
+.team,
+.works,
+.people-say,
+.contact,
+.footer {
+    padding-top: $section-padding - 20px;
+    padding-bottom: $section-padding - 20px;
 }
 
-.section__title {
-    margin: 0;
-    color: $basic-color-3;
-    font-size: 1.1em;
-    font-weight: 400;
+.about {
+    @include media-breakpoint-up(sm) {
+        padding-top: 65px;
+        padding-bottom: $section-padding;
+    }
 }
 
-.section__header {
-    margin-bottom: 30px;
-    border-left: 5px solid rgb(189, 187, 187);
-    padding-top: .5em;
-    padding-bottom: .5em;
+.contact {
+    @include media-breakpoint-up(sm) {
+        padding-top: 65px;
+        padding-bottom: $section-padding;
+    }
 }
 
-.section__number-task {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: darken($basic-color-3, 10%);
-    font-weight: 900;
+.expertise {
+    @include media-breakpoint-up(sm) {
+        padding-top: 66px;
+        padding-bottom: 75px;
+    }
+}
+
+.footer {
+    @include media-breakpoint-up(sm) {
+        padding-top: $section-padding;
+        padding-bottom: 65px;
+    }
+}
+
+.people-say {
+    @include media-breakpoint-up(sm) {
+        padding-top: $section-padding;
+        padding-bottom: 76px;
+    }
+}
+
+.team {
+    @include media-breakpoint-up(sm) {
+        padding-top: 67px;
+        padding-bottom: $section-padding;
+    }
+}
+
+.works {
+
+    @include media-breakpoint-up(sm) {
+        padding-top: 65px;
+        padding-bottom: $section-padding;
+    }
 }
 
 
@@ -114,21 +154,44 @@ body {
     }
 }
 
+// Блок с градиентом и фоновым изображением
+// Фоновое изображение нужно добавлять для каждого блока в scss таким способом: 
+// .block-name {
+//      &:before {
+//          background-image: url( $image_dir + 'img-name.png' );
+//      }
+// }
+.overlay {
+    background: rgba(49, 29, 94, .85);
+    background: linear-gradient(0deg, rgba(9, 5, 47, .85) 0%, rgba(49, 29, 94, .85) 100%);
 
 
-// Декор для блока
-.opacity {
-    opacity: .5;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        background-size: cover;
+        z-index: -1;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
 }
 
-.shadow {
-    box-shadow: 10px 10px 10px lightgreen;
+// Логотип
+.logo {
+    height: 50px;
+    width: 128px;
 }
 
-.bordered {
-    outline: 5px dashed $basic-color-1;
-}
-
-.bordered-2 {
-    outline: 10px double rgb(146, 7, 25);
+.logo__img {
+    height: 50px;
+    width: 128px;
+    max-width: 100%;
 }

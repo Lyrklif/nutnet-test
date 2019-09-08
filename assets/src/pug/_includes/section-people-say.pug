@@ -1,0 +1,45 @@
+//- Отзыв
+mixin comment(name, profession)
+    .comment
+        if block
+            p.comment__text: block
+        else
+            p.comment__text 
+                | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. 
+                | Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. 
+                | Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+                | Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+        h3.comment__name= name
+        p.comment__profession= profession
+
+
+//- Элемент слайдера навигации (кнопка с фотографией автора отзыва)
+mixin userpic-dot(src)
+    li.userpic-dot
+        button.userpic-dot__btn 
+            img.userpic-dot__img(src=src alt='dot')&attributes(attributes)
+
+
+
+section.people-say.overlay.anchor#people-say
+    .container
+        .row
+            header.col.hidden
+                h2 People say
+        .row    
+            .col-12.offset-md-1.col-md-10.people-say__list-wp
+                ul.people-say__list
+                    li.people-say__item: +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Jane Galadriel', 'Ceo tengkurep')
+                    li.people-say__item: +comment('Name', 'Profession')
+                    li.people-say__item: +comment('Name', 'Profession')
+        .row
+            .col-12.offset-md-1.col-md-10.people-say__nav-slider-wp
+                ul.people-say__nav-slider
+                    +userpic-dot('img/user-pic-dot-1.png')
+                    +userpic-dot('img/user-pic-dot-2.png')
+                    +userpic-dot('img/user-pic-dot-3.png')
+                    +userpic-dot('img/user-pic-dot-4.png')
+                    +userpic-dot('img/user-pic-dot-5.png')
+

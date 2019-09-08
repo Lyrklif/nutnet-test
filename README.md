@@ -1,7 +1,7 @@
-**Ссылка** - https://lyrklif.github.io/js.learn/assets/dist/  
+**Ссылка** - https://lyrklif.github.io/nutnet-test/assets/dist/  
   
 
-# Директория для закрепления теории по js
+# nutnet-test
 Тестовое задание для стажировки в Nutnet по направлению frontend
 
 

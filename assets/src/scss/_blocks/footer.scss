@@ -1,0 +1,233 @@
+.footer {
+    color: $text-on-dark-bg;
+    // padding-bottom: 65px;
+    font-size: 14px;
+
+    &:before {
+        background-image: url($image_dir + 'footer-bg.png' );
+    }
+}
+
+.footer__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+
+.footer__text {
+    line-height: 1.857;
+    font-weight: 300;
+    margin-top: 18px;
+    letter-spacing: .25px;
+    max-width: 100%;
+}
+
+.footer__links {
+    line-height: 1.857;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+        margin-top: 69px;
+    }
+}
+
+
+.footer__link {
+    color: $text-on-dark-bg;
+    margin-right: 20px;
+
+    @include media-breakpoint-up(lg) {
+        margin-right: 0;
+    }
+}
+
+.footer__headline {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 30px;
+    display: block;
+    letter-spacing: .5px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 18px;
+    }
+}
+
+.footer__address {
+    line-height: 1.857;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    margin-top: 32px;
+    letter-spacing: .25px;
+}
+
+.footer__icon-wp {
+    position: relative;
+    width: 28px;
+    height: 100%;
+    display: block;
+    padding-top: 3px;
+}
+
+.footer__tel {
+    line-height: 1.857;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    margin-top: 15px;
+    letter-spacing: .25px;
+
+    a {
+        color: $text-on-dark-bg;
+    }
+}
+
+
+.footer__block-3 {
+    @include media-breakpoint-up(lg) {
+        padding-left: 20px;
+    }
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+
+    margin-top: 35px;
+    margin-bottom: 27px;
+
+    max-width: 100%;
+
+}
+
+.subscribe__input {
+    background: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    width: 210px;
+    max-width: 210px;
+    margin-right: 10px;
+    height: 45px;
+    color: rgba(255, 255, 255, .75);
+    letter-spacing: .5px;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, .75);
+    }
+
+    &:hover,
+    &:focus {
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
+.subscribe__btn {
+    border: none;
+    background: rgba(255, 255, 255, .5);
+    width: 70px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+        background: rgba(255, 255, 255, .3);
+    }
+}
+
+.footer__copyright {
+    font-size: 14px;
+    margin-top: 30px;
+    display: block;
+    letter-spacing: .25px;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 62px;
+        text-align: right;
+    }
+}
+
+
+// ******************************
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.social__item {
+    margin: 0 8px 8px 0;
+}
+
+.soocial__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+
+    &:hover {
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
+
+// ******************************
+.facebook {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: 0px -30px;
+    width: 7px;
+    height: 15px;
+}
+
+.twitter {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: -31px -11px;
+    width: 14px;
+    height: 11px;
+}
+
+.dribbble {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.instagram {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: -16px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.google {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: 0px -16px;
+    width: 15px;
+    height: 14px;
+}
+
+.youtube {
+    background-image: url($image_dir + 'social-sprite.png' );
+    background-position: -31px 0px;
+    width: 17px;
+    height: 11px;
+}

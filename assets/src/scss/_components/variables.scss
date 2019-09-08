@@ -27,8 +27,8 @@ $browser-context: 16px;
 
 // Шрифты 
 $font-family1: 'Roboto', sans-serif;
-$font-family2: $font-family1;
-$font-family3: $font-family1;
+$font-family2: 'HammersmithOne', sans-serif;
+$font-family3: 'Playfair Display', serif;
 
 
 // Чёрный и белый 
@@ -37,10 +37,10 @@ $black-color: #000000;
 
 
 // Основные цвета
-$basic-color-1: rgb(53, 71, 173);
+$basic-color-1: #00e0d0;
 $basic-color-2: #413d4b;
-$basic-color-3: rgb(10, 96, 153);
-$basic-color-4: #e9e4df;
+$basic-color-3: #2f2d35;
+$basic-color-4: #333333;
 
 
 // Цвет текста на тёмном фоне

@@ -1,0 +1,11 @@
+section.contact.container.anchor#contact
+    .row
+        header.col-12.offset-md-2.col-md-8.offset-lg-3.col-lg-6.contact__header
+            h2.contact__title Give us a good news
+    .row
+        form.col-12.offset-md-2.col-md-8.offset-lg-3.col-lg-6.feedback(action="/", method="post")
+            input.feedback__input(type="text", name='name', placeholder='Name')
+            input.feedback__input(type="email", name='email', placeholder='Email')
+            input.feedback__input(type="text", name='subject', placeholder='Subject')
+            textarea.feedback__massage(name="massage", placeholder='Your Massage')
+            input.link-btn(type="submit", name='submit', value="Submit")
