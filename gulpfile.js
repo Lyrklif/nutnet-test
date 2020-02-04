@@ -10,20 +10,26 @@
 var path = {
     dist: {
         html: 'assets/dist/',
+        manifest: 'assets/dist/',
         js: 'assets/dist/js/',
+        jsPortable: 'assets/dist/',
         css: 'assets/dist/css/',
         img: 'assets/dist/img/'
     },
     src: {
         baseDir: 'assets/src',
+        manifest: 'assets/src/*.webmanifest',
         pug: 'assets/src/pug/*.pug',
         js: 'assets/src/js/main.js',
+        jsPortable: 'assets/src/js/_portable/*.js',
         scss: 'assets/src/scss/main.scss',
         img: 'assets/src/img/**/*.*'
     },
     watch: {
         pug: 'assets/src/pug/**/*.pug',
+        manifest: 'assets/src/*.webmanifest',
         js: 'assets/src/js/**/*.js',
+        jsPortable: 'assets/src/js/_portable/*.js',
         scss: 'assets/src/scss/**/*.scss',
         img: 'assets/src/img/**/*.*'
     },
@@ -57,23 +63,31 @@ var gulp = require('gulp'), // подключаем Gulp
 /* задачи */
 
 // запуск сервера
-gulp.task('webserver', function() {
+gulp.task('webserver', function () {
     webserver(config);
 });
 
 
 // сбор html из pug-файлов
-gulp.task('html:dist', function() {
+gulp.task('html:dist', function () {
     return gulp.src(path.src.pug)
         .pipe(plumber()) // отслеживание ошибок
         .pipe(pug())
         .pipe(gulp.dest(path.dist.html)) // выкладывание готовых файлов
         .pipe(webserver.reload({ stream: true })); // перезагрузка сервера
-  });
+});
+
+// сбор manifest
+gulp.task('manifest:dist', function () {
+    return gulp.src(path.src.manifest)
+        .pipe(plumber()) // отслеживание ошибок
+        .pipe(gulp.dest(path.dist.manifest)) // выкладывание готовых файлов
+        .pipe(webserver.reload({ stream: true })); // перезагрузка сервера
+});
 
 
 // сбор стилей
-gulp.task('css:dist', function() {
+gulp.task('css:dist', function () {
     return gulp.src(path.src.scss) // получим main.scss
         .pipe(plumber()) // для отслеживания ошибок
         .pipe(sourcemaps.init()) // инициализируем sourcemap
@@ -90,7 +104,7 @@ gulp.task('css:dist', function() {
 
 
 // сбор js
-gulp.task('js:dist', function() {
+gulp.task('js:dist', function () {
     return gulp.src(path.src.js) // получим файл main.js
         .pipe(plumber()) // для отслеживания ошибок
         .pipe(fileinclude({ // импортируем все указанные файлы в main.js
@@ -106,20 +120,33 @@ gulp.task('js:dist', function() {
         .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
 });
 
+// сбор jsPortable
+gulp.task('jsPortable:dist', function () {
+    return gulp.src(path.src.jsPortable) // получим файлы
+        .pipe(plumber()) // для отслеживания ошибок
+        .pipe(fileinclude({ // импортируем все указанные файлы
+            prefix: '@@',
+            basepath: '@root'
+        }))
+        .pipe(uglify()) // минимизируем js
+        .pipe(gulp.dest(path.dist.jsPortable)) // положим готовый файл
+        .pipe(webserver.reload({ stream: true })); // перезагрузим сервер      
+});
+
 
 // перенос картинок
-gulp.task('img:dist', function() {
+gulp.task('img:dist', function () {
     return gulp.src(path.src.img) // путь с исходниками картинок
         .pipe(gulp.dest(path.dist.img)); // выгрузка готовых файлов
 });
 
 // удаление старых файлов из каталога dist 
-gulp.task('clean:dist', async function() {
+gulp.task('clean:dist', async function () {
     return del.sync(path.clean);
 });
 
 // очистка кэша
-gulp.task('cache:clear', function() {
+gulp.task('cache:clear', function () {
     cache.clearAll();
 });
 
@@ -128,18 +155,22 @@ gulp.task('dist',
     gulp.series('clean:dist',
         gulp.parallel(
             'html:dist',
+            'manifest:dist',
             'css:dist',
             'js:dist',
+            'jsPortable:dist',
             'img:dist'
         )
     )
 );
 
 // запуск задач при изменении файлов
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(path.watch.pug, gulp.series('html:dist'));
+    gulp.watch(path.watch.manifest, gulp.series('manifest:dist'));
     gulp.watch(path.watch.scss, gulp.series('css:dist'));
     gulp.watch(path.watch.js, gulp.series('js:dist'));
+    gulp.watch(path.watch.jsPortable, gulp.series('jsPortable:dist'));
     gulp.watch(path.watch.img, gulp.series('img:dist'));
 });
 
