@@ -1,5 +1,5 @@
 doctype html
-        
+
 html(lang="en")
     //- Шрифты
     - font1= 'Roboto:100,100i,300,400,500,700,900'
@@ -12,19 +12,20 @@ html(lang="en")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="theme-color" content="#fff")
-        link(rel="apple-touch-icon", sizes="180x180", href="img/apple-touch-icon.png")
-        link(rel="icon", type="image/png", sizes="32x32", href="img/favicon-32x32.png")
-        link(rel="icon", type="image/png", sizes="16x16", href="img/favicon-16x16.png")
+        link(rel="icon", type="image/png", sizes="512x512", href="img/zontik.png")
+        link(rel="icon", type="image/png", sizes="64x64", href="img/zontik-64x64.png")
+        link(rel="icon", type="image/png", sizes="128x128", href="img/zontik-128x128.png")
+        link(rel="icon", type="image/png", sizes="256x256", href="img/zontik-256x256.png")
         link(rel="mask-icon", href="img/safari-pinned-tab.svg", color="#5bbad5")
         meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel='manifest' href='manifest.webmanifest')
-        title='Tajem Creative'
+        link(rel='manifest' href='manifest.json')
         script(src='serviceWorker.js')
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=" + allFonts +"&display=swap")
+        title='Tajem Creative'
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=" + allFonts + "&display=swap")
         link(rel="stylesheet" href="css/main.min.css")
     body
-        include ../_includes/header 
+        include ../_includes/header
 
         main.main
             block content

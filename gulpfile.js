@@ -4,7 +4,7 @@
 /**
  * Путь к файлам
  * src - исходные файлы
- * dist - готовые файлы 
+ * dist - готовые файлы
  * watch - файлы, за изменениями в которых надо наблюдать
  */
 var path = {
@@ -18,7 +18,7 @@ var path = {
     },
     src: {
         baseDir: 'assets/src',
-        manifest: 'assets/src/*.webmanifest',
+        manifest: 'assets/src/manifest.json',
         pug: 'assets/src/pug/*.pug',
         js: 'assets/src/js/main.js',
         jsPortable: 'assets/src/js/_portable/*.js',
@@ -27,7 +27,7 @@ var path = {
     },
     watch: {
         pug: 'assets/src/pug/**/*.pug',
-        manifest: 'assets/src/*.webmanifest',
+        manifest: 'assets/src/manifest.json',
         js: 'assets/src/js/**/*.js',
         jsPortable: 'assets/src/js/_portable/*.js',
         scss: 'assets/src/scss/**/*.scss',
@@ -130,7 +130,7 @@ gulp.task('jsPortable:dist', function () {
         }))
         .pipe(uglify()) // минимизируем js
         .pipe(gulp.dest(path.dist.jsPortable)) // положим готовый файл
-        .pipe(webserver.reload({ stream: true })); // перезагрузим сервер      
+        .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
 });
 
 
@@ -140,7 +140,7 @@ gulp.task('img:dist', function () {
         .pipe(gulp.dest(path.dist.img)); // выгрузка готовых файлов
 });
 
-// удаление старых файлов из каталога dist 
+// удаление старых файлов из каталога dist
 gulp.task('clean:dist', async function () {
     return del.sync(path.clean);
 });

@@ -1,11 +1,19 @@
 // This is the service worker with the Cache-first network
 
 const CACHE = "pwabuilder-precache";
+
+// const precacheFiles = [
+//   /* Add an array of files to precache for your app */
+//   // "./**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}"
+//   "./",
+//   "index.html",
+//   "second-page.html",
+//   "css/main.min.css",
+//   "js/main.min.js",
+// ];
+
 const precacheFiles = [
-  /* Add an array of files to precache for your app */
-  "index.html",
-  "css/main.min.css",
-  "js/main.min.js",
+  "./",
 ];
 
 self.addEventListener("install", function (event) {
@@ -29,8 +37,9 @@ self.addEventListener("activate", function (event) {
 });
 
 // If any fetch fails, it will look for the request in the cache and serve it from there first
-self.addEventListener("fetch", function (event) { 
+self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
+  if ( event.request.url.indexOf( '/second-page' ) !== -1 ) return; // не кешировать second-page
 
   event.respondWith(
     fromCache(event.request).then(
