@@ -15,7 +15,6 @@
   "icons": [
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik.png", "sizes": "512x512"},
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-64x64.png", "sizes": "64x64"},
-    {"src": "https://lyrklif.github.io/nutnet-test/img/zontik.png", "sizes": "180x180"},
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-128x128.png", "sizes": "128x128"},
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-256x256.png", "sizes": "256x256"}
   ],
