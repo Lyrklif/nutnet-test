@@ -7,7 +7,7 @@
   "start_url": "https://lyrklif.github.io/nutnet-test/",
   "short_name": "Tajem Creative",
   "theme_color": "#000",
-  "description": "",
+  "description": "Описание Tajem",
   "orientation": "any",
   "background_color": "#400080",
   "related_applications": [],
@@ -17,8 +17,7 @@
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-64x64.png", "sizes": "64x64"},
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik.png", "sizes": "180x180"},
     {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-128x128.png", "sizes": "128x128"},
-    {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-256x256.png", "sizes": "256x256"},
-
+    {"src": "https://lyrklif.github.io/nutnet-test/img/zontik-256x256.png", "sizes": "256x256"}
   ],
   "screenshots": [],
   "generated": "true"
