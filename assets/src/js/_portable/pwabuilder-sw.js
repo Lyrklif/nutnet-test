@@ -93,3 +93,30 @@ function updateCache(request, response) {
     return cache.put(request, response);
   });
 }
+
+
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'Push Codelab';
+  const options = {
+    body: 'Yay it works.',
+    icon: 'img/zontik-64x64.png',
+    badge: 'img/zontik-64x64.png'
+  };
+
+  const notificationPromise = self.registration.showNotification(title, options);
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
+
+  event.notification.close();
+
+  event.waitUntil(
+    self.clients.openWindow('https://developers.google.com/web/')
+  );
+});
